@@ -149,9 +149,10 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: var(--header-height);
+    min-height: var(--header-height);
     display: flex;
     align-items: center;
+    padding: 0.5rem 0;
 }
 
 nav {
@@ -159,12 +160,15 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .nav-links a {
