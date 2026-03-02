@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mnie | dr Dariusz Mosler – Naukowiec, Fizjoterapeuta, Data Scientist</title>
+    <meta name="description"
+        content="Poznaj dr. Dariusza Moslera, fizjoterapeutę i naukowca łączącego nauki o kulturze fizycznej z Data Science. Wykładowca, badacz MDPI, twórca Biokineticum.">
+    <link rel="canonical" href="https://biokineticum.com/about.html" />
+    <link rel="alternate" hreflang="pl" href="https://biokineticum.com/about.html" />
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="O mnie | dr Dariusz Mosler – Naukowiec, Fizjoterapeuta, Data Scientist">
+    <meta property="og:description"
+        content="Poznaj dr. Dariusza Moslera, fizjoterapeutę i naukowca łączącego nauki o kulturze fizycznej z Data Science. Wykładowca, badacz MDPI, twórca Biokineticum.">
+    <meta property="og:url" content="https://biokineticum.com/about.html">
+    <meta property="og:type" content="profile">
+    <meta property="og:image" content="https://biokineticum.com/images/profile_hero.jpg">
+
+    <!-- Schema: E-E-A-T Medical/Health Expert Profile -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dr Dariusz Mosler",
+      "jobTitle": ["Naukowiec", "Wykładowca Akademicki", "Fizjoterapeuta"],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Uniwersytet Szczeciński"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Akademia Wychowania Fizycznego w Katowicach"
+        }
+      ],
+      "worksFor": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Uniwersytet im. Jana Długosza w Częstochowie"
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Biokineticum"
+        }
+      ],
+      "email": "dariusz.mosler@gmail.com",
+      "sameAs": [
+        "https://linkedin.com/in/dariusz-mosler-b3856768",
+        "https://www.researchgate.net/profile/Dariusz-Mosler",
+        "https://orcid.org/0000-0002-8794-2994"
+      ]
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-PTSYR05SE2'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PTSYR05SE2');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6881554784265771"
+        crossorigin="anonymous"></script>
+
+    <style>
+        /* Wbudowany CSS dla podstrony O mnie - budujący zaufanie (E-E-A-T) */
+        .about-hero {
+            background-color: #f8fafc;
+            padding: 5rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .about-hero img.profile-img {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+        }
+
+        .about-hero h1 {
+            color: #0f172a;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-hero h2 {
+            color: #1e3a8a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .about-hero p.mission-statement {
+            font-size: 1.2rem;
+            color: #475569;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-style: italic;
+            border-top: 2px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+
+        .about-section {
+            padding: 5rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-heading h3 {
+            font-size: 2.2rem;
+            color: #0f172a;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .section-heading h3::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #1e3a8a;
+            border-radius: 2px;
+        }
+
+        .section-heading.left-aligned {
+            text-align: left;
+        }
+
+        .section-heading.left-aligned h3::after {
+            left: 0;
+            transform: none;
+        }
+
+        .about-bio h3 {
+            font-size: 1.8rem;
+            color: #1e3a8a;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-bio h3:first-child {
+            margin-top: 0;
+        }
+
+        .about-bio p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .bg-light {
+            background-color: #f1f5f9;
+            border-radius: 12px;
+            padding: 4rem 2rem;
+            margin: 3rem auto;
+            max-width: 1100px;
+        }
+
+        /* Lists */
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .info-list li::before {
+            content: "•";
+            color: #1e3a8a;
+            font-size: 2rem;
+            position: absolute;
+            left: 0;
+            top: -0.5rem;
+        }
+
+        .info-list li strong {
+            color: #0f172a;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading.left-aligned {
+                text-align: center;
+            }
+
+            .section-heading.left-aligned h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Sekcja Zaufanie / Autorytet */
+        .authority-section {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .authority-section p {
+            color: #475569;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .trust-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+        }
+
+        .trust-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            color: #fff;
+            font-size: 1.05rem;
+            min-width: 200px;
+        }
+
+        .trust-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .trust-btn.linkedin {
+            background-color: #0077b5;
+        }
+
+        .trust-btn.researchgate {
+            background-color: #00ccbb;
+        }
+
+        .trust-btn.orcid {
+            background-color: #a6ce39;
+            color: #111;
+        }
+
+        .trust-btn.email {
+            background-color: #1e3a8a;
+        }
+
+        .trust-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            opacity: 0.95;
+            color: #fff;
+        }
+
+        .trust-btn.orcid:hover {
+            color: #111;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="images/logo.jpg" alt="Biokineticum - Logo"
+                        class="nav-logo"></a>
+                <div class="menu-toggle" id="mobile-menu">☰</div>
+                <div class="nav-links">
+                    <a href="index.html">Główna</a>
+                    <a href="cennik.html">Cennik</a>
+                    <a href="education.html">Education Software</a>
+                    <a href="noitom.html">Noitom Polska</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="english.html">English</a>
+                    <a href="contact.html" class="btn btn-primary">Kontakt</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sekcja Hero -->
+        <section class="about-hero">
+            <div class="container">
+                <img src="images/profile_hero.jpg" alt="Dr Dariusz Mosler" class="profile-img">
+                <h1>Dr Dariusz Mosler</h1>
+                <h2>Naukowiec, Wykładowca Akademicki i Fizjoterapeuta</h2>
+                <p class="mission-statement">
+                    Łączę nauki o kulturze fizycznej z potencjałem Data Science, aby wprowadzać innowacje w
+                    fizjoterapii.
+                </p>
+            </div>
+        </section>
+
+        <!-- Główny Biogram -->
+        <section class="about-section about-bio">
+            <h3>Kim jestem?</h3>
+            <p>
+                Jestem zaangażowanym wykładowcą i badaczem na Uniwersytecie (Akademii) im. Jana Długosza w Częstochowie.
+                Tytuł doktora nauk o kulturze fizycznej uzyskałem na Uniwersytecie Szczecińskim. Od ponad dekady pracuję
+                jako fizjoterapeuta, a moją największą pasją jest poprawa wyników zdrowotnych pacjentów oraz ciągłe
+                poszerzanie wiedzy w mojej dziedzinie. Moja ścieżka zawodowa to połączenie akademickiej doskonałości,
+                wieloletniego doświadczenia praktycznego oraz głębokiego zaangażowania w dostępność i projektowanie
+                włączające (Inclusive Design).
+            </p>
+
+            <h3>Moja misja: Fizjoterapia spotyka Data Science</h3>
+            <p>
+                Głęboko wierzę, że integracja analityki danych (Data Science) z kulturą fizyczną i fizjoterapią może
+                prowadzić do przełomowych odkryć i innowacji w naszym sektorze. Aktywnie rozwijam swoje kompetencje w
+                tym obszarze, posiadając certyfikaty z zakresu zarządzania danymi badawczymi oraz podstaw Data Science.
+                Nieustannie szukam możliwości wdrażania tych umiejętności w moich badaniach oraz codziennej praktyce
+                zawodowej.
+            </p>
+        </section>
+
+        <!-- Doświadczenie zawodowe i kliniczne -->
+        <section class="bg-light">
+            <div class="section-heading">
+                <h3>Doświadczenie zawodowe i kliniczne</h3>
+            </div>
+
+            <div class="grid-2">
+                <div>
+                    <h4 style="font-size: 1.4rem; color: #1e3a8a; margin-bottom: 1.5rem;">Praktyka Kliniczna i Biznesowa
+                    </h4>
+                    <ul class="info-list">
+                        <li><strong>Biokineticum</strong> – Właściciel (od kwietnia 2025).</li>
+                        <li><strong>Calmfit</strong> – Właściciel i osoba zarządzająca gabinetem przez ponad 12 lat
+                            (październik 2012 – marzec 2025).</li>
+                        <li><strong>Praca z pacjentami o szczególnych potrzebach</strong> – Jako fizjoterapeuta od lat
+                            współpracuję z organizacjami pożytku publicznego, wspierając pacjentów m.in. w <em>Polskim
+                                Towarzystwie Walki z Mukowiscydozą</em>, <em>Stowarzyszeniu Rodziców Na Rzecz Dzieci
+                                Niepełnosprawnych "OLIMP"</em> oraz <em>Stowarzyszeniu "PROMYK"</em>. Doświadczenie
+                            zdobywałem również w Środowiskowym Domu Samopomocy dla Osób z Zaburzeniami Psychicznymi w
+                            Oświęcimiu.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="font-size: 1.4rem; color: #1e3a8a; margin-bottom: 1.5rem;">Działalność Naukowa i
+                        Akademicka</h4>
+                    <ul class="info-list">
+                        <li><strong>Uniwersytet im. Jana Długosza w Częstochowie</strong> – Adiunkt (od grudnia 2017).
+                        </li>
+                        <li><strong>MDPI</strong> – Członek Topical Advisory Panel w sekcji <em>Applied Biosciences and
+                                Bioengineering</em> (od maja 2024).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wykształcenie i Kompetencje -->
+        <section class="about-section">
+            <div class="section-heading left-aligned">
+                <h3>Wykształcenie i Kompetencje</h3>
+            </div>
+
+            <div class="grid-2">
+                <div>
+                    <h4 style="font-size: 1.4rem; color: #1e3a8a; margin-bottom: 1.5rem;">Edukacja</h4>
+                    <ul class="info-list">
+                        <li><strong>Uniwersytet Szczeciński</strong>: Doktor nauk o kulturze fizycznej (2020).</li>
+                        <li><strong>AWF Katowice</strong>: Magister fizjoterapii (2011-2013).</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="font-size: 1.4rem; color: #1e3a8a; margin-bottom: 1.5rem;">Wybrane certyfikaty i
+                        umiejętności</h4>
+                    <ul class="info-list">
+                        <li>Analiza Danych (Data Analysis) i Data Science.</li>
+                        <li>Zarządzanie danymi badawczymi dla naukowców i data stewardów.</li>
+                        <li>Wprowadzenie do dostępności cyfrowej i Inclusive Design.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Zaufanie i Autorytet -->
+        <section class="bg-light authority-section">
+            <div class="section-heading">
+                <h3>Kontakt i Współpraca</h3>
+            </div>
+            <p>Zapraszam do współpracy naukowej, wymiany doświadczeń w obszarze bioinżynierii i danych, a także do
+                kontaktu w sprawach klinicznych.</p>
+
+            <div class="trust-links">
+                <!-- ResearchGate -->
+                <a href="https://www.researchgate.net/profile/Dariusz-Mosler" target="_blank" rel="noopener noreferrer"
+                    class="trust-btn researchgate">
+                    ResearchGate
+                </a>
+
+                <!-- ORCID -->
+                <a href="https://orcid.org/0000-0002-8794-2994" target="_blank" rel="noopener noreferrer"
+                    class="trust-btn orcid">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z" />
+                    </svg>
+                    ORCID
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/dariusz-mosler-b3856768" target="_blank" rel="noopener noreferrer"
+                    class="trust-btn linkedin">
+                    LinkedIn
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:dariusz.mosler@gmail.com" class="trust-btn email">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                    Napisz wiadomość
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- AdSense -->
+    <div class="container" style="text-align: center; margin: 2rem auto;">
+        <!-- reklama_1 -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6881554784265771"
+            data-ad-slot="7700312728" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo">Biokineticum</a>
+                    <p>Diagnostyka fizjoterapeutyczna i trening oparty na dowodach naukowych i technologii pomiarowej.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Główna</a></li>
+                        <li><a href="about.html">O mnie</a></li>
+                        <li><a href="cennik.html">Cennik</a></li>
+                        <li><a href="education.html">Edukacja</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="mailto:biokineticum@proton.me">biokineticum@proton.me</a></li>
+                        <li><a href="tel:+48502123662">+48 502 123 662</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Social Media</h4>
+                    <ul>
+                        <li><a href="https://www.youtube.com/@Biokineticum" target="_blank">YouTube</a></li>
+                        <li><a href="https://www.instagram.com/biokineticum/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@biokineticum" target="_blank">TikTok</a></li>
+                        <li><a href="https://www.linkedin.com/in/dariusz-mosler-b3856768/?locale=pl"
+                                target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Biokineticum. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        document.getElementById('mobile-menu').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
