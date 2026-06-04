@@ -70,7 +70,7 @@
                 <div class="nav-links">
                     <a href="index.html" class="active">Główna</a>
                     <a href="about.html">O mnie</a>
-                    <a href="cennik.html">Cennik</a>
+                    <a href="cennik.html">Wsparcie</a>
                     <a href="education.html">Education Software</a>
                     <a href="noitom.html">Noitom Polska</a>
                     <a href="publikacje.html">Publikacje</a>
@@ -80,81 +80,161 @@
                 </div>
             </nav>
         </div>
-    </header>
-
-    <section class="hero">
+       <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Analiza biomechaniczna i fizjoterapia</h1>
-                <p>Łączę <a href="cennik.html">praktykę fizjoterapeutyczną</a> z komputerową <a
-                        href="education.html">analizą ruchu</a>, aby dostarczać łatwe rozwiązania i
-                    skuteczniej pomagać pacjentom oraz sportowcom poprzez wykorzystanie <a href="noitom.html">narzędzi
-                        biomechanicznych</a>.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="contact.html" class="btn btn-primary">Umów konsultację</a>
-                    <a href="cennik.html" class="btn btn-outline">Zobacz ofertę</a>
+                <h1>Analiza Biomechaniczna & Open Source Lab</h1>
+                <p>Projektujemy i wdrażamy bezpłatne, otwarte oprogramowanie do analizy ruchu, wizualizacji 3D oraz integracji systemów motion capture. Wspieramy laboratoria badawcze, uczelnie wyższe i innowacyjny sport-tech w przetwarzaniu i analizie danych kinematycznych.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="portfolio.html" class="btn btn-primary">Zobacz nasze projekty (GitHub)</a>
+                    <a href="cennik.html" class="btn btn-outline">Wsparcie i konsultacje</a>
                 </div>
             </div>
-
-
         </div>
     </section>
 
+    <!-- Sekcja: Otwarty kod źródłowy (Open Source Showcase) -->
     <section class="container" style="padding: 4rem 2rem;">
-        <div class="split-layout">
-            <div>
-                <img src="images/profile_hero.jpg" alt="Fizjoterapeuta dr hab. Dariusz Mosler - analiza biomechaniczna"
-                    class="split-image">
-            </div>
-            <div class="split-content">
-                <h2>dr n. o k.f. Dariusz Mosler</h2>
-                <p>Nazywam się Dariusz Mosler i jestem <a href="contact.html">fizjoterapeutą</a>. Posiadam tytuł doktora
-                    nauk o kulturze fizycznej
-                    i interesuję się w szczególności biomechaniką.</p>
-                <p>W mojej praktyce staram się wykorzystywać najnowsze osiągnięcia technologii, aby obiektywnie mierzyć
-                    i analizować ludzki ruch, co pozwala na precyzyjne dopasowanie terapii i treningu.</p>
-                <a href="contact.html" class="btn btn-outline">Dowiedz się więcej</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
         <div class="section-title">
-            <h2>Nasze Usługi</h2>
-            <p>Biomechaniczne podejście do zdrowia i sprawności fizycznej</p>
+            <h2>Oprogramowanie Open-Source</h2>
+            <p>Darmowe, nowoczesne narzędzia i skrypty wspierające badania nad ruchem człowieka</p>
         </div>
 
         <div class="grid-3">
-            <div class="card">
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">💆‍♂️</div>
-                <h3>Fizjoterapia</h3>
-                <p>Oferuję konsultacje fizjoterapeutyczne w trybie stacjonarnym oraz w formie wideokonferencji z
-                    wykorzystaniem diagnostyki komputerowej oraz zdale monitorowanie treningu i terapii.</p>
+            <!-- 1. Kinesiology Analyzer Center -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+                    <h3>Kinesiology Analyzer Center</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #1e3a8a; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Python</span>
+                        <span style="background: #10b981; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Local AI / RAG</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">Natywne oprogramowanie desktopowe do automatycznej ekstrakcji i parsowania danych z profesjonalnych urządzeń laboratoryjnych (Biodex, Noraxon EMG/IMUs, Humac, platformy siłowe AMTI/Kistler). Posiada wbudowanego lokalnego asystenta AI (RAG) do bezpiecznej analizy piśmiennictwa naukowego w środowisku offline (GDPR/HIPAA-compliant).</p>
+                </div>
+                <a href="https://github.com/biokineticum/kinesiology_analyzer_center" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Kod źródłowy (GitHub)</a>
             </div>
 
-            <div class="card">
-                <img src="images/service_analysis.jpg" alt="Komputerowa analiza ruchu i diagnostyka biomechaniczna"
-                    class="card-img-top">
-                <h3>Analiza ruchu</h3>
-                <p>Biomechaniczna ocena ruchu przy użyciu zaawansowanej komputerowej analizy obrazu wideo. Precyzyjne
-                    dane dla lepszych wyników. Analiza stacjonarna i zdalna.</p>
+            <!-- 2. MotionScope 3D -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏃‍♂️</div>
+                    <h3>MotionScope 3D</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #f59e0b; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">JavaScript</span>
+                        <span style="background: #06b6d4; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">WebGL / Three.js</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">Internetowa przeglądarka i trójwymiarowy analizator plików motion capture w formacie Biovision Hierarchy (.bvh). Aplikacja umożliwia płynne renderowanie szkieletu postaci bezpośrednio w oknie przeglądarki, wyliczanie kątów w stawach, śledzenie trajektorii sensorów oraz eksport danych kinematycznych do plików CSV.</p>
+                </div>
+                <a href="https://web-bvh-viewer.vercel.app/" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Uruchom aplikację online</a>
             </div>
 
-            <div class="card">
-                <img src="images/service_motor.jpg" alt="Testy motoryczne i ocena funkcjonalna sportowców"
-                    class="card-img-top">
-                <h3>Testy motoryczne</h3>
-                <p>Ilościowa analiza danych pozwala na zbieranie twardych dowodów. Dowiedz się, jak wykonujesz
-                    ruch i monitoruj postępy - szybkość, siłę, zakresy ruchu.</p>
+            <!-- 3. IMU Strike Diagnostics -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔋</div>
+                    <h3>IMU Strike Diagnostics</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #1e3a8a; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Python</span>
+                        <span style="background: #8b5cf6; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Open Hardware</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">Kompletny schemat, oprogramowanie i blueprint dla samodzielnego montażu taniego czujnika inercyjnego (IMU) o wysokiej skali pomiarowej (do 200g). Zoptymalizowany pod kątem pomiaru dynamiki uderzeń w sportach walki, pozwala na rejestrację przyspieszeń liniowych i prędkości kątowych za pomocą skryptów w języku Python.</p>
+                </div>
+                <a href="https://github.com/biokineticum/imu_dareczin" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Schemat i kod (GitHub)</a>
+            </div>
+
+            <!-- 4. Web Joint Analyzer -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📷</div>
+                    <h3>Web Joint Analyzer</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #1e3a8a; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Python</span>
+                        <span style="background: #ec4899; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">MediaPipe / Streamlit</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">Oprogramowanie webowe do markerless motion capture (bezznacznikowej analizy ruchu) przy użyciu zwykłej kamery internetowej lub plików wideo. Algorytm wykorzystuje sztuczną inteligencję MediaPipe do wykrywania punktów antropometrycznych ciała oraz automatycznie wyznacza prędkość kątową i zakres ruchu stawów.</p>
+                </div>
+                <a href="https://github.com/biokineticum/web_joint_analyzer" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Repozytorium GitHub</a>
+            </div>
+
+            <!-- 5. Noraxon Strike Analyzer -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📉</div>
+                    <h3>Noraxon Strike Analyzer</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #3b82f6; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Jupyter Notebook</span>
+                        <span style="background: #64748b; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">EMG & Force Plate</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">Specjalistyczne skrypty analityczne do segmentacji i analizy danych z czujników Noraxon Ultium EMG oraz platformy dynamometrycznej AMTI. Kod filtruje zakłócenia sygnału elektromiograficznego i automatycznie dzieli długie sesje pomiarowe na fazy pojedynczych uderzeń, generując uśrednione profile siły.</p>
+                </div>
+                <a href="https://github.com/biokineticum/noraxon_analyzer" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Skrypty i dane (GitHub)</a>
+            </div>
+
+            <!-- 6. Noitom Single Sensor API -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔗</div>
+                    <h3>Noitom Single Sensor API</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #1e293b; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Axis SDK</span>
+                        <span style="background: #1e3a8a; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Python & C++</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">Praktyczny przykład integracji i pobierania surowych danych przyspieszenia z pojedynczego sensora inercyjnego Noitom Perception Neuron 3 poprzez Axis Studio API (Mocap.api). Idealne rozwiązanie startowe do prototypowania systemów biofeedback i prostych aplikacji dedykowanych.</p>
+                </div>
+                <a href="https://github.com/biokineticum/noitom_mocap_api_single_sensor" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Kod integracyjny (GitHub)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja: Wsparcie i Integracja (Services) -->
+    <section class="container" style="padding: 2rem 2rem 4rem 2rem; background: var(--card-bg); border-radius: 8px;">
+        <div class="section-title">
+            <h2>Wsparcie Techniczne i Usługi Badawcze</h2>
+            <p>Oferujemy specjalistyczne wsparcie przy konfiguracji aparatury laboratoryjnej oraz pisaniu kodu dedykowanego</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="card" style="background: var(--bg-body); border: 1px solid var(--border-color);">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">💻</div>
+                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-color);">Dedykowany Software badawczy</h4>
+                <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-muted);">Tworzymy dedykowane narzędzia w Pythonie i Matlabie do obróbki sygnałów kinematycznych. Budujemy przeglądarki 3D ruchu (WebGL/Three.js) zintegrowane z modelami biomechanicznymi.</p>
+            </div>
+
+            <div class="card" style="background: var(--bg-body); border: 1px solid var(--border-color);">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">📡</div>
+                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-color);">Integracja Sensorów i Mocap</h4>
+                <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-muted);">Pomagamy zintegrować, skalibrować i oprogramować bezprzewodowe czujniki IMU, systemy motion capture (Noitom Perception Neuron, OptiTrack) oraz platformy dynamometryczne.</p>
+            </div>
+
+            <div class="card" style="background: var(--bg-body); border: 1px solid var(--border-color);">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">🎓</div>
+                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-color);">Konsultacje Naukowe i R&D</h4>
+                <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-muted);">Przygotowujemy automatyczne skrypty do statystycznej analizy badań laboratoryjnych, czyszczenia danych (noise reduction) oraz generowania znormalizowanych raportów badawczych.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja: O mnie (Restructured Bio) -->
+    <section class="container" style="padding: 4rem 2rem;">
+        <div class="split-layout">
+            <div>
+                <img src="images/profile_hero.jpg" alt="dr hab. Dariusz Mosler - biomechanika i data science" class="split-image">
+            </div>
+            <div class="split-content">
+                <h2>O nas - Nauki o ruchu łączymy z technologią</h2>
+                <p>Założycielem Biokineticum jest <strong>dr hab. Dariusz Mosler</strong> – naukowiec, adiunkt na Uniwersytecie im. Jana Długosza w Częstochowie oraz członek Topical Advisory Panel czasopisma naukowego MDPI <em>Applied Biosciences and Bioengineering</em>.</p>
+                <p>Nasz warsztat to unikalne połączenie wieloletniej wiedzy z zakresu biomechaniki klinicznej i sportowej oraz praktycznych umiejętności programowania (Python, Data Science). Tworzymy bezpieczne oprogramowanie offline i prowadzimy badania, których celem jest demokratyzacja cyfrowej analizy ruchu ludzkiego.</p>
+                <a href="about.html" class="btn btn-outline" style="margin-top: 1rem; display: inline-block;">Więcej o moim profilu naukowym</a>
             </div>
         </div>
     </section>
 
     <!-- Sekcja Partnerzy (PL) -->
-    <section class="container" style="padding: 4rem 2rem;">
+    <section class="container" style="padding: 2rem 2rem 4rem 2rem;">
         <div class="section-title">
-            <h2>Partnerzy</h2>
-            <p>Współpracujemy z najlepszymi w branży technologii sportowej i medycznej</p>
+            <h2>Nasi Partnerzy</h2>
+            <p>Współpracujemy z innowatorami wdrażającymi rozwiązania oparte na twardych dowodach (evidence-based)</p>
         </div>
 
         <div class="split-layout"
@@ -168,15 +248,10 @@
 
             <div class="split-content">
                 <h3>Victor – Garrido Sportech</h3>
-                <p>Victor i jego marka Garrido Sportech to pionierzy we wprowadzaniu sportu do obszaru medycyny opartej
-                    na faktach (evidence-based medicine). Ich innowacyjne rozwiązania technologiczne pozwalają na
-                    precyzyjną, ilościową analizę postępów sportowych.</p>
-                <p>Co najważniejsze, technologia ta umożliwia zachowanie pełnej rzetelności naukowej bezpośrednio w
-                    codziennych warunkach treningowych, a nie tylko w zamkniętych laboratoriach. Dzięki niesamowitej
-                    przystępności, rozwiązania Garrido Sportech trafiają do szerokiego grona odbiorców – od amatorów po
-                    profesjonalistów – rewolucjonizując podejście do pomiaru wyników i optymalizacji treningu.</p>
+                <p>Victor i jego marka Garrido Sportech to pionierzy we wprowadzaniu sportu do obszaru medycyny opartej na faktach (evidence-based medicine). Ich innowacyjne rozwiązania pozwalają na precyzyjną, ilościową analizę biomechaniczną w codziennych warunkach treningowych.</p>
+                <p>Dzięki innowacyjnym projektom wspólnie rewolucjonizujemy podejście do pomiaru wyników i automatyzacji raportów sportowych, przekładając skomplikowane odczyty z sensorów inercyjnych na bezpośrednie, czytelne wskaźniki dla trenerów i lekarzy.</p>
                 <a href="https://www.garridosportech.cl" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-primary" style="margin-top: 1rem;">Odwiedź stronę: www.garridosportech.cl</a>
+                    class="btn btn-primary" style="margin-top: 1rem;">Odwiedź Garrido Sportech</a>
             </div>
         </div>
     </section>
@@ -207,7 +282,7 @@
                     <ul>
                         <li><a href="index.html">Główna</a></li>
                         <li><a href="about.html">O mnie</a></li>
-                        <li><a href="cennik.html">Cennik</a></li>
+                        <li><a href="cennik.html">Wsparcie</a></li>
                         <li><a href="education.html">Edukacja</a></li>
                         <li><a href="publikacje.html">Publikacje</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>

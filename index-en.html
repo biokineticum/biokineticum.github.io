@@ -70,7 +70,7 @@
                 <div class="nav-links">
                     <a href="index-en.html" class="active">Home</a>
                     <a href="about-en.html">About Me</a>
-                    <a href="pricing-en.html">Pricing</a>
+                    <a href="pricing-en.html">Support</a>
                     <a href="education-en.html">Education Software</a>
                     <a href="noitom-en.html">Noitom Poland</a>
                     <a href="publications-en.html">Publications</a>
@@ -85,67 +85,158 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Biomechanical Analysis & Physiotherapy</h1>
-                <p>I combine <a href="pricing-en.html">physiotherapy practice</a> with computer <a href="education-en.html">motion analysis</a> to provide easy solutions and effectively help patients and athletes using <a href="noitom-en.html">biomechanical tools</a>.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="contact-en.html" class="btn btn-primary">Book Consultation</a>
-                    <a href="pricing-en.html" class="btn btn-outline">See Offers</a>
+                <h1>Biomechanical Analysis & Open Source Lab</h1>
+                <p>We design and implement free, open-source software for motion analysis, 3D visualization, and motion capture integration. Supporting research labs, universities, and innovative sports-tech companies in processing and analyzing kinematic data.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="portfolio-en.html" class="btn btn-primary">See Our Projects (GitHub)</a>
+                    <a href="pricing-en.html" class="btn btn-outline">Support & Consultations</a>
                 </div>
             </div>
-
-
         </div>
     </section>
 
+    <!-- Section: Open Source Showcase -->
     <section class="container" style="padding: 4rem 2rem;">
-        <div class="split-layout">
-            <div>
-                <img src="images/profile_hero.jpg" alt="Fizjoterapeuta dr hab. Dariusz Mosler - analiza biomechaniczna"
-                    class="split-image">
-            </div>
-            <div class="split-content">
-                <h2>Dr. hab. Dariusz Mosler, PhD</h2>
-                <p>My name is Dariusz Mosler and I am a physiotherapist. I hold a PhD in Physical Culture Sciences and I am particularly interested in biomechanics.</p>
-                <p>In my practice, I strive to use the latest technological achievements to objectively measure and analyze human movement, allowing for precise adjustment of therapy and training.</p>
-                <a href="contact-en.html" class="btn btn-outline">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
         <div class="section-title">
-            <h2>Our Services</h2>
-            <p>Biomechanical approach to health and physical fitness</p>
+            <h2>Open-Source Software</h2>
+            <p>Free, modern tools and scripts supporting research on human movement</p>
         </div>
 
         <div class="grid-3">
-            <div class="card">
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">💆‍♂️</div>
-                <h3>Physiotherapy</h3>
-                <p>I offer physiotherapy consultations both in-person and via video conference, using computer diagnostics and remote monitoring of training and therapy.</p>
+            <!-- 1. Kinesiology Analyzer Center -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+                    <h3>Kinesiology Analyzer Center</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #1e3a8a; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Python</span>
+                        <span style="background: #10b981; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Local AI / RAG</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">Native desktop application for automated clinical biomechanics PDF/CSV extraction (Biodex, Noraxon EMG/IMUs, Humac, force plates), interactive multi-sensor dataset building, local RAG research, and local LLM fine-tuning. Built for offline-first, GDPR/HIPAA-compliant sports science laboratories.</p>
+                </div>
+                <a href="https://github.com/biokineticum/kinesiology_analyzer_center" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Source Code (GitHub)</a>
             </div>
 
-            <div class="card">
-                <img src="images/service_analysis.jpg" alt="Komputerowa analiza ruchu i diagnostyka biomechaniczna"
-                    class="card-img-top">
-                <h3>Motion Analysis</h3>
-                <p>Biomechanical motion assessment using advanced computer video analysis. Precise data for better results. In-person and remote analysis.</p>
+            <!-- 2. MotionScope 3D -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏃‍♂️</div>
+                    <h3>MotionScope 3D</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #f59e0b; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">JavaScript</span>
+                        <span style="background: #06b6d4; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">WebGL / Three.js</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">Web-based 3D motion capture visualizer and analyzer for Biovision Hierarchy (.bvh) files. The application enables smooth skeleton rendering directly in the browser, joint angle calculations, sensor trajectory tracking, and kinematic telemetry data export to CSV files.</p>
+                </div>
+                <a href="https://web-bvh-viewer.vercel.app/" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Launch App Online</a>
             </div>
 
-            <div class="card">
-                <img src="images/service_motor.jpg" alt="Testy motoryczne i ocena funkcjonalna sportowców"
-                    class="card-img-top">
-                <h3>Motor Tests</h3>
-                <p>Quantitative data analysis allows gathering hard evidence. Learn how you move and monitor your progress - speed, strength, and range of motion.</p>
+            <!-- 3. IMU Strike Diagnostics -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔋</div>
+                    <h3>IMU Strike Diagnostics</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #1e3a8a; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Python</span>
+                        <span style="background: #8b5cf6; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Open Hardware</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">Complete hardware blueprint, firmware, and Python script suite for assembling a low-cost, high-scale (up to 200g) inertial measurement unit (IMU). Tailored for combat sports strike diagnostics, capturing linear accelerations and angular velocities.</p>
+                </div>
+                <a href="https://github.com/biokineticum/imu_dareczin" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Schematics & Code (GitHub)</a>
+            </div>
+
+            <!-- 4. Web Joint Analyzer -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📷</div>
+                    <h3>Web Joint Analyzer</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #1e3a8a; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Python</span>
+                        <span style="background: #ec4899; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">MediaPipe / Streamlit</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">Web application for markerless motion capture and joint angle analysis using a standard webcam or video files. Utilizes artificial intelligence MediaPipe to detect body landmarks and automatically calculates joint angular velocities.</p>
+                </div>
+                <a href="https://github.com/biokineticum/web_joint_analyzer" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">GitHub Repository</a>
+            </div>
+
+            <!-- 5. Noraxon Strike Analyzer -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📉</div>
+                    <h3>Noraxon Strike Analyzer</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #3b82f6; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Jupyter Notebook</span>
+                        <span style="background: #64748b; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">EMG & Force Plate</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">Specialized analytical scripts for segmenting and analyzing data from Noraxon Ultium EMG sensors and AMTI force plates. Filters EMG noise and automatically segments continuous sessions into individual strikes, plotting average force profiles.</p>
+                </div>
+                <a href="https://github.com/biokineticum/noraxon_analyzer" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Scripts & Data (GitHub)</a>
+            </div>
+
+            <!-- 6. Noitom Single Sensor API -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔗</div>
+                    <h3>Noitom Single Sensor API</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: #1e293b; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Axis SDK</span>
+                        <span style="background: #1e3a8a; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Python & C++</span>
+                    </div>
+                    <p style="text-align: justify; font-size: 0.95rem; line-height: 1.5;">A practical integration example demonstrating how to stream raw acceleration telemetry data from a single Perception Neuron 3 inertial sensor via the Axis Studio SDK (Mocap.api) for biofeedback systems.</p>
+                </div>
+                <a href="https://github.com/biokineticum/noitom_mocap_api_single_sensor" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Integration Code (GitHub)</a>
             </div>
         </div>
     </section>
 
-    <!-- Sekcja Partnerzy (PL) -->
+    <!-- Section: Services & R&D Support -->
+    <section class="container" style="padding: 2rem 2rem 4rem 2rem; background: var(--card-bg); border-radius: 8px;">
+        <div class="section-title">
+            <h2>Technical Support & Research Services</h2>
+            <p>We offer expert consultation for laboratory equipment setups and custom code development</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="card" style="background: var(--bg-body); border: 1px solid var(--border-color);">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">💻</div>
+                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-color);">Custom Research Software</h4>
+                <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-muted);">We develop custom scripts in Python and Matlab for kinematic signal processing. We build interactive WebGL/Three.js 3D motion viewers integrated with biomechanical models.</p>
+            </div>
+
+            <div class="card" style="background: var(--bg-body); border: 1px solid var(--border-color);">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">📡</div>
+                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-color);">Sensor & MoCap Integration</h4>
+                <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-muted);">We help integrate, calibrate, and program wireless IMU sensors, motion capture systems (Noitom Perception Neuron, OptiTrack), and force plates.</p>
+            </div>
+
+            <div class="card" style="background: var(--bg-body); border: 1px solid var(--border-color);">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">🎓</div>
+                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-color);">Scientific & R&D Consulting</h4>
+                <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-muted);">We prepare automated scripts for statistical analysis of laboratory trials, data filtering (noise reduction), and generating standardized research reports.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: About (Restructured Bio) -->
     <section class="container" style="padding: 4rem 2rem;">
+        <div class="split-layout">
+            <div>
+                <img src="images/profile_hero.jpg" alt="dr hab. Dariusz Mosler - biomech & data science" class="split-image">
+            </div>
+            <div class="split-content">
+                <h2>About Us - Bridging Movement Science & Technology</h2>
+                <p>Biokineticum was founded by <strong>Dr. hab. Dariusz Mosler, PhD</strong> – university lecturer and assistant professor at Jan Dlugosz University in Czestochowa, and a member of the Topical Advisory Panel for the MDPI scientific journal <em>Applied Biosciences and Bioengineering</em>.</p>
+                <p>Our workshop represents a unique blend of years of clinical and sports biomechanics expertise and practical software engineering (Python, Data Science). We build secure offline software and conduct research to democratize digital human movement analysis.</p>
+                <a href="about-en.html" class="btn btn-outline" style="margin-top: 1rem; display: inline-block;">Learn more about my academic background</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Partners Section -->
+    <section class="container" style="padding: 2rem 2rem 4rem 2rem;">
         <div class="section-title">
             <h2>Our Partners</h2>
-            <p>Collaborating with the best in sports technology and evidence-based medicine</p>
+            <p>Collaborating with innovators implementing evidence-based solutions</p>
         </div>
 
         <div class="split-layout"
@@ -159,10 +250,10 @@
 
             <div class="split-content">
                 <h3>Victor – Garrido Sportech</h3>
-                <p>Victor and his brand, Garrido Sportech, are pioneers in bringing sports into the realm of evidence-based medicine. Their innovative technological solutions enable precise, quantitative analysis of athletic progress.</p>
-                <p>Most importantly, this technology allows athletes and coaches to maintain strict scientific rigor directly in real-world training environments, rather than being limited to specialized laboratories. Highly accessible, Garrido Sportech's solutions reach a broad audience—from amateurs to professionals—revolutionizing the way performance is measured and training is optimized.</p>
+                <p>Victor and his brand, Garrido Sportech, are pioneers in bringing sports into the realm of evidence-based medicine. Their innovative technological solutions enable precise, quantitative biomechanical analysis directly in real-world training environments.</p>
+                <p>Through our joint projects, we are revolutionizing athletic performance measurement and report automation, converting complex inertial sensor readings into actionable indicators for coaches and clinicians.</p>
                 <a href="https://www.garridosportech.cl" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-primary" style="margin-top: 1rem;">Visit website: www.garridosportech.cl</a>
+                    class="btn btn-primary" style="margin-top: 1rem;">Visit Garrido Sportech</a>
             </div>
         </div>
     </section>
@@ -192,7 +283,7 @@
                     <ul>
                         <li><a href="index-en.html">Home</a></li>
                         <li><a href="about-en.html">About Me</a></li>
-                        <li><a href="pricing-en.html">Pricing</a></li>
+                        <li><a href="pricing-en.html">Support</a></li>
                         <li><a href="education-en.html">Edukacja</a></li>
                         <li><a href="publications-en.html">Publications</a></li>
                         <li><a href="portfolio-en.html">Portfolio</a></li>
