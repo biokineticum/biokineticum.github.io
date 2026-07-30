@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles.css">
 
     <!-- Schema: E-E-A-T Medical/Health Expert Profile & Service -->
+        <!-- Schema: MedicalClinic & Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -22,12 +23,23 @@
       "url": "https://biokineticum.com/telerehabilitation-en.html",
       "medicalSpecialty": "Physiotherapy",
       "paymentAccepted": "Cryptocurrency, Bitcoin, Monero, Bank Transfer",
-      "priceRange": "25 USD",
       "currenciesAccepted": "PLN, USD, EUR, BTC, XMR, USDT",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "biokineticum@proton.me",
-        "contactType": "customer support"
+      "email": "biokineticum@proton.me",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Physiotherapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Telerehabilitation Consultation",
+              "description": "45 min online visit using AI motion analysis."
+            },
+            "price": "25.00",
+            "priceCurrency": "USD"
+          }
+        ]
       }
     }
     </script>

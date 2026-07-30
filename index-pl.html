@@ -21,29 +21,6 @@
     <meta property="og:image" content="https://biokineticum.com/images/profile_hero.jpg">
 
     <!-- Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Biokineticum",
-      "description": "Profesjonalna analiza biomechaniczna, doradztwo naukowe R&D, dystrybucja systemów motion capture Noitom Perception Neuron oraz oprogramowanie open-source dla badaczy i inżynierów.",
-      "url": "https://biokineticum.com",
-      "telephone": "+48-502-123-662",
-      "email": "biokineticum@proton.me",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "PL",
-        "addressRegion": "Małopolskie",
-        "addressLocality": "Jawiszowice"
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "dr hab. Dariusz Mosler"
-      },
-      "priceRange": "$$"
-    }
-    </script>
-
     <!-- Google tag (gtag.js) -->
     <script async src='https://www.googletagmanager.com/gtag/js?id=G-PTSYR05SE2'></script>
     <script>
@@ -54,7 +31,36 @@
         gtag('config', 'G-PTSYR05SE2');
     </script>
 
-    </head>
+        <!-- Schema: WebSite, Organization & Person -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Biokineticum",
+        "url": "https://biokineticum.com/"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Biokineticum",
+        "url": "https://biokineticum.com/",
+        "logo": "https://biokineticum.com/images/logo.jpg",
+        "email": "biokineticum@proton.me",
+        "founder": {
+          "@type": "Person",
+          "name": "dr hab. Dariusz Mosler",
+          "jobTitle": "Physiotherapist & Data Scientist",
+          "sameAs": [
+            "https://linkedin.com/in/dariusz-mosler-b3856768",
+            "https://www.researchgate.net/profile/Dariusz-Mosler",
+            "https://orcid.org/0000-0002-8794-2994"
+          ]
+        }
+      }
+    ]
+    </script>
+</head>
 
 <body>
 

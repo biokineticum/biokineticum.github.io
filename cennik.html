@@ -22,29 +22,6 @@
     <meta property="og:image" content="https://biokineticum.com/images/profile_hero.jpg">
 
     <!-- Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Biokineticum",
-      "description": "Profesjonalna analiza biomechaniczna, doradztwo naukowe R&D, dystrybucja systemów motion capture Noitom Perception Neuron oraz oprogramowanie open-source dla badaczy i inżynierów.",
-      "url": "https://biokineticum.com",
-      "telephone": "+48-502-123-662",
-      "email": "biokineticum@proton.me",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "PL",
-        "addressRegion": "Małopolskie",
-        "addressLocality": "Jawiszowice"
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "dr hab. Dariusz Mosler"
-      },
-      "priceRange": "$$"
-    }
-    </script>
-
     <!-- Google tag (gtag.js) -->
     <script async src='https://www.googletagmanager.com/gtag/js?id=G-PTSYR05SE2'></script>
     <script>
@@ -55,7 +32,37 @@
         gtag('config', 'G-PTSYR05SE2');
     </script>
 
-    </head>
+        <!-- Schema: MedicalClinic & Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Biokineticum Telerehabilitacja",
+      "description": "Telerehabilitacja, analiza ruchu (Machine Learning), prywatne konsultacje z płatnością w kryptowalutach.",
+      "url": "https://biokineticum.com/telerehabilitacja.html",
+      "medicalSpecialty": "Physiotherapy",
+      "paymentAccepted": "Cryptocurrency, Bitcoin, Monero, Bank Transfer",
+      "currenciesAccepted": "PLN, USD, EUR, BTC, XMR, USDT",
+      "email": "biokineticum@proton.me",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Usługi Fizjoterapii",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Konsultacja Telerehabilitacyjna",
+              "description": "Wizyta online 45 min z wykorzystaniem analizy ruchu AI."
+            },
+            "price": "100.00",
+            "priceCurrency": "PLN"
+          }
+        ]
+      }
+    }
+    </script>
+</head>
 
 <body>
 
