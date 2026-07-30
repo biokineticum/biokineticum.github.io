@@ -48,19 +48,35 @@ homepage_schema = """    <!-- Schema: WebSite, Organization & Person -->
     ]
     </script>"""
 
-# 2. Telerehabilitation & Pricing Schema (MedicalBusiness / Service)
-service_schema_pl = """    <!-- Schema: MedicalClinic & Service -->
+# 2. Telerehabilitation & Pricing Schema (Physician / Service / Person)
+service_schema_pl = """    <!-- Schema: Physician & Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalClinic",
+      "@type": "Physician",
       "name": "Biokineticum Telerehabilitacja",
+      "image": "https://biokineticum.com/images/profile_hero.jpg",
+      "logo": "https://biokineticum.com/images/logo.jpg",
       "description": "Telerehabilitacja, analiza ruchu (Machine Learning), prywatne konsultacje z płatnością w kryptowalutach.",
       "url": "https://biokineticum.com/telerehabilitacja.html",
       "medicalSpecialty": "Physiotherapy",
       "paymentAccepted": "Cryptocurrency, Bitcoin, Monero, Bank Transfer",
       "currenciesAccepted": "PLN, USD, EUR, BTC, XMR, USDT",
       "email": "biokineticum@proton.me",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Worldwide"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "dr hab. Dariusz Mosler",
+        "jobTitle": "Physiotherapist & Data Scientist",
+        "sameAs": [
+          "https://linkedin.com/in/dariusz-mosler-b3856768",
+          "https://www.researchgate.net/profile/Dariusz-Mosler",
+          "https://orcid.org/0000-0002-8794-2994"
+        ]
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Usługi Fizjoterapii",
@@ -70,7 +86,16 @@ service_schema_pl = """    <!-- Schema: MedicalClinic & Service -->
             "itemOffered": {
               "@type": "Service",
               "name": "Konsultacja Telerehabilitacyjna",
-              "description": "Wizyta online 45 min z wykorzystaniem analizy ruchu AI."
+              "description": "Wizyta online 45 min z wykorzystaniem analizy ruchu Machine Learning.",
+              "provider": {
+                "@type": "Person",
+                "name": "dr hab. Dariusz Mosler"
+              },
+              "availableChannel": {
+                "@type": "ServiceChannel",
+                "serviceUrl": "https://matrix.org/",
+                "availableLanguage": ["pl", "en"]
+              }
             },
             "price": "100.00",
             "priceCurrency": "PLN"
@@ -80,18 +105,34 @@ service_schema_pl = """    <!-- Schema: MedicalClinic & Service -->
     }
     </script>"""
 
-service_schema_en = """    <!-- Schema: MedicalClinic & Service -->
+service_schema_en = """    <!-- Schema: Physician & Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalClinic",
+      "@type": "Physician",
       "name": "Biokineticum Telerehabilitation",
+      "image": "https://biokineticum.com/images/profile_hero.jpg",
+      "logo": "https://biokineticum.com/images/logo.jpg",
       "description": "Telerehabilitation, motion analysis (Machine Learning), private consultations with crypto payment.",
       "url": "https://biokineticum.com/telerehabilitation-en.html",
       "medicalSpecialty": "Physiotherapy",
       "paymentAccepted": "Cryptocurrency, Bitcoin, Monero, Bank Transfer",
       "currenciesAccepted": "PLN, USD, EUR, BTC, XMR, USDT",
       "email": "biokineticum@proton.me",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Worldwide"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "dr hab. Dariusz Mosler",
+        "jobTitle": "Physiotherapist & Data Scientist",
+        "sameAs": [
+          "https://linkedin.com/in/dariusz-mosler-b3856768",
+          "https://www.researchgate.net/profile/Dariusz-Mosler",
+          "https://orcid.org/0000-0002-8794-2994"
+        ]
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Physiotherapy Services",
@@ -101,7 +142,16 @@ service_schema_en = """    <!-- Schema: MedicalClinic & Service -->
             "itemOffered": {
               "@type": "Service",
               "name": "Telerehabilitation Consultation",
-              "description": "45 min online visit using AI motion analysis."
+              "description": "45 min online visit using Machine Learning motion analysis.",
+              "provider": {
+                "@type": "Person",
+                "name": "dr hab. Dariusz Mosler"
+              },
+              "availableChannel": {
+                "@type": "ServiceChannel",
+                "serviceUrl": "https://matrix.org/",
+                "availableLanguage": ["pl", "en"]
+              }
             },
             "price": "25.00",
             "priceCurrency": "USD"
@@ -120,6 +170,7 @@ person_schema = """    <!-- Schema: Person (Expert Profile) -->
       "jobTitle": "Physiotherapist & Data Scientist",
       "description": "Wykładowca, badacz MDPI, twórca Biokineticum. Łączy nauki o kulturze fizycznej z Data Science.",
       "email": "dariusz.mosler@gmail.com",
+      "image": "https://biokineticum.com/images/profile_hero.jpg",
       "sameAs": [
         "https://linkedin.com/in/dariusz-mosler-b3856768",
         "https://www.researchgate.net/profile/Dariusz-Mosler",
@@ -140,4 +191,4 @@ inject_schema('pricing-en.html', service_schema_en)
 inject_schema('about.html', person_schema)
 inject_schema('about-en.html', person_schema)
 
-print("Schema injection complete.")
+print("Advanced Schema injection complete.")
