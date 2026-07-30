@@ -7,9 +7,9 @@
 
 :root {
     /* Dark Theme Palette */
-    --bg-body: #0f1115;
+    --bg-body: #050505;
     /* Very Dark Gunmetal */
-    --bg-surface: #181b21;
+    --bg-surface: #111111;
     /* Dark Card Surface */
     --bg-header: rgba(15, 17, 21, 0.85);
     /* Glassmorphic Header */
