@@ -7,15 +7,18 @@ def main():
 
     urls = []
     
+    import datetime
+    today = datetime.date.today().isoformat()
+    
     # Add root URL explicitly
-    urls.append("""   <url>
+    urls.append(f"""   <url>
       <loc>https://biokineticum.com/</loc>
-      <lastmod>2026-07-30</lastmod>
-      <changefreq>monthly</changefreq>
+      <lastmod>{today}</lastmod>
+      <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>""")
 
-    for filepath in html_files:
+    for filepath in sorted(html_files):
         filename = os.path.basename(filepath)
         # exclude backups and old english.html
         if 'backup' in filename or filename == 'english.html':
@@ -30,8 +33,8 @@ def main():
             
         urls.append(f"""   <url>
       <loc>{url}</loc>
-      <lastmod>2026-07-30</lastmod>
-      <changefreq>monthly</changefreq>
+      <lastmod>{today}</lastmod>
+      <changefreq>weekly</changefreq>
       <priority>{priority}</priority>
    </url>""")
 
@@ -44,7 +47,7 @@ def main():
     with open(os.path.join(directory, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap_content)
         
-    print("Sitemap generated.")
+    print(f"Sitemap generated with {len(urls)} URLs.")
 
 if __name__ == '__main__':
     main()

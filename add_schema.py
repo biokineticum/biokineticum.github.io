@@ -93,7 +93,7 @@ service_schema_pl = """    <!-- Schema: Physician & Service -->
               },
               "availableChannel": {
                 "@type": "ServiceChannel",
-                "serviceUrl": "https://matrix.org/",
+                "serviceUrl": "https://biokineticum.com/telerehabilitacja.html",
                 "availableLanguage": ["pl", "en"]
               }
             },
@@ -149,7 +149,7 @@ service_schema_en = """    <!-- Schema: Physician & Service -->
               },
               "availableChannel": {
                 "@type": "ServiceChannel",
-                "serviceUrl": "https://matrix.org/",
+                "serviceUrl": "https://biokineticum.com/telerehabilitation-en.html",
                 "availableLanguage": ["pl", "en"]
               }
             },
