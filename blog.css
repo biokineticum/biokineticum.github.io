@@ -229,3 +229,176 @@ header.article-header, .article-header {
         margin-bottom: 1rem;
     }
 }
+
+/* Category Filter Tabs & Badges */
+.blog-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 2rem auto 0;
+    max-width: 1000px;
+    padding: 0 1rem;
+}
+
+.filter-btn {
+    background: var(--bg-surface);
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.35);
+}
+
+.article-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+    width: fit-content;
+}
+
+.tag-telerehab {
+    background: rgba(99, 102, 241, 0.15);
+    color: #818cf8;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.tag-ai {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.tag-sports {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.tag-education {
+    background: rgba(236, 72, 153, 0.15);
+    color: #f472b6;
+    border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+/* Key Takeaways Box */
+.key-takeaways {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(30, 41, 59, 0.5) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    margin: 2rem 0 2.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.key-takeaways h3 {
+    color: var(--primary-light);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.key-takeaways ul {
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+}
+
+.key-takeaways li {
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+/* In-Article Service CTA Box */
+.article-cta-box {
+    background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+    border: 1px solid var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    margin: 3.5rem 0;
+    text-align: center;
+    box-shadow: var(--shadow-lg), 0 0 25px rgba(99, 102, 241, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.article-cta-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.article-cta-box h3 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.article-cta-box p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+}
+
+.article-cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #ffffff;
+    padding: 0.9rem 2rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+    position: relative;
+}
+
+.article-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
+    background: var(--primary-light);
+    color: #ffffff;
+}
+
+/* Scientific Evidence Callout */
+.evidence-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid #10b981;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 0.98rem;
+}
+
+.evidence-card strong {
+    color: #34d399;
+    display: block;
+    margin-bottom: 0.4rem;
+}

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knowledge Base & Scientific Publications | Dr. hab. Dariusz Mosler</title>
+    <title>Knowledge Base & Scientific Blog | Biokineticum</title>
     <meta name="description"
-        content="Knowledge base and scientific publications by Dr. hab. Dariusz Mosler. Discover the latest research in biomechanics, physiotherapy, and motion analysis.">
-    <link rel="canonical" href="https://biokineticum.com/publikacje.html" />
-    <link rel="alternate" hreflang="pl" href="https://biokineticum.com/publications-en.html" />
+        content="Evidence-based physiotherapy, biomechanics, machine learning motion analysis, and clinical simulation articles by Dr. hab. Dariusz Mosler.">
+    <link rel="canonical" href="https://biokineticum.com/publications-en.html" />
+    <link rel="alternate" hreflang="pl" href="https://biokineticum.com/publikacje.html" />
     <link rel="alternate" hreflang="en" href="https://biokineticum.com/publications-en.html" />
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="blog.css"> <!-- Dodatkowe style dla bloga -->
+    <link rel="stylesheet" href="blog.css">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Baza Wiedzy i Publikacje Naukowe | dr hab. Dariusz Mosler">
+    <meta property="og:title" content="Knowledge Base & Scientific Blog | dr hab. Dariusz Mosler">
     <meta property="og:description"
-        content="Knowledge base and scientific publications by Dr. hab. Dariusz Mosler. Discover the latest research in biomechanics and physiotherapy.">
+        content="Evidence-based physiotherapy, biomechanics, and machine learning motion analysis. Explore research by Dr. hab. Dariusz Mosler.">
     <meta property="og:url" content="https://biokineticum.com/publications-en.html">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://biokineticum.com/images/profile_hero.jpg">
@@ -26,13 +26,13 @@
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "name": "Baza Wiedzy i Publikacje Naukowe",
-      "description": "A collection of science articles explaining complex biomechanical research for physiotherapy and sports practice.",
-      "url": "https://biokineticum.com/publikacje.html",
+      "name": "Knowledge Base & Scientific Publications",
+      "description": "A collection of science articles and clinical research in biomechanics, telerehabilitation, and machine learning motion analysis.",
+      "url": "https://biokineticum.com/publications-en.html",
       "author": {
         "@type": "Person",
         "name": "Dr hab. Dariusz Mosler",
-        "url": "https://biokineticum.com/about.html"
+        "url": "https://biokineticum.com/about-en.html"
       }
     }
     </script>
@@ -46,16 +46,14 @@
 
         gtag('config', 'G-PTSYR05SE2');
     </script>
-
-    </head>
+</head>
 
 <body>
 
     <header>
         <div class="container">
             <nav>
-                <a href="index-pl.html" class="logo"><img src="images/logo.jpg" alt="Biokineticum - Logo"
-                        class="nav-logo"></a>
+                <a href="index.html" class="logo"><img src="images/logo.jpg" alt="Biokineticum - Logo" class="nav-logo"></a>
                 <div class="menu-toggle" id="mobile-menu">☰</div>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
@@ -66,7 +64,11 @@
                     <a href="noitom-en.html">Noitom Poland</a>
                     <a href="publications-en.html" class="active">Publications</a>
                     <a href="portfolio-en.html">Portfolio</a>
-                    <div class="lang-switch" style="display: inline-flex; gap: 0.5rem; align-items: center; font-weight: bold; margin-left: auto;"><a href="publikacje.html" style="color: var(--text-muted); text-decoration: none;">PL</a> <span style="color: var(--text-muted);">|</span> <strong>EN</strong></div>
+                    <div class="lang-switch" style="display: inline-flex; gap: 0.5rem; align-items: center; font-weight: bold; margin-left: auto;">
+                        <a href="publikacje.html" style="color: var(--text-muted); text-decoration: none;">PL</a>
+                        <span style="color: var(--text-muted);">|</span>
+                        <strong>EN</strong>
+                    </div>
                     <a href="contact-en.html" class="btn btn-primary">Contact</a>
                 </div>
             </nav>
@@ -74,24 +76,85 @@
     </header>
 
     <main>
-        <!-- Sekcja Hero dla Bloga / Bazy Wiedzy -->
+        <!-- Hero Section for Blog / Knowledge Base -->
         <section class="blog-hub-hero">
             <div class="container">
-                <h1>Knowledge Base & Scientific Publications</h1>
+                <h1>Knowledge Base & Scientific Blog</h1>
                 <p>
-                    Modern physiotherapy and sports are rooted in Evidence Based Practice (EBP).
-                    On this blog, I translate complex biomechanical and analytical research into accessible knowledge for physiotherapy and sports practice. Discover how data and numbers impact human movement.
+                    Modern physiotherapy and sports science are rooted in Evidence-Based Practice (EBP).
+                    On this blog, I translate complex biomechanical research, machine learning algorithms, and clinical trials into actionable knowledge for practitioners and patients.
                 </p>
+
+                <!-- Category Filter Tabs -->
+                <div class="blog-filters">
+                    <button class="filter-btn active" data-filter="all">All Topics</button>
+                    <button class="filter-btn" data-filter="telerehab">Telerehabilitation</button>
+                    <button class="filter-btn" data-filter="ai">AI & Computer Vision</button>
+                    <button class="filter-btn" data-filter="sports">Combat Sports Biomechanics</button>
+                    <button class="filter-btn" data-filter="education">Clinical Simulation & Tools</button>
+                </div>
             </div>
         </section>
 
-        <!-- Lista Publikacji (Grid) -->
-        <section class="blog-grid">
+        <!-- Publications Grid -->
+        <section class="blog-grid" id="articles-grid">
 
-            <!-- Artykuł 1 -->
-            <article class="article-card">
-                <!-- Tu w przyszłości można wstawić <img src="..." alt="..." class="article-card-image"> dodając CSS -->
+            <!-- Flagship Article 1: Telerehab Evidence -->
+            <article class="article-card" data-category="telerehab">
                 <div class="article-card-content">
+                    <span class="article-tag tag-telerehab">Telerehabilitation</span>
+                    <span class="article-date">Published: March 2026</span>
+                    <h3 class="article-card-title">Is Remote Physiotherapy as Effective as In-Person Treatment? What Systematic Reviews and Clinical Trials Tell Us</h3>
+                    <p class="article-card-excerpt">
+                        Meta-analyses and Cochrane reviews prove that evidence-based telerehabilitation achieves non-inferior clinical outcomes in pain reduction and functional recovery compared to in-clinic visits for spinal pain, osteoarthritis, and post-operative rehab.
+                    </p>
+                    <a href="article-telerehabilitation-evidence-en.html" class="read-more-btn">Read clinical evidence &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Flagship Article 2: Markerless AI Vision -->
+            <article class="article-card" data-category="ai">
+                <div class="article-card-content">
+                    <span class="article-tag tag-ai">AI & Computer Vision</span>
+                    <span class="article-date">Published: March 2026</span>
+                    <h3 class="article-card-title">Markerless Biomechanics: How Real-Time Computer Vision and Zero-LLM Architecture Secure Remote Physiotherapy</h3>
+                    <p class="article-card-excerpt">
+                        How deep learning pose estimation (YOLOv8) delivers laboratory-grade joint angles and balance tracking over video calls without compromising patient privacy or uploading health data to generative clouds.
+                    </p>
+                    <a href="article-markerless-ai-telerehabilitation-en.html" class="read-more-btn">Read full analysis &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Flagship Article 3: Simulation & PhysioSim -->
+            <article class="article-card" data-category="education">
+                <div class="article-card-content">
+                    <span class="article-tag tag-education">Clinical Education</span>
+                    <span class="article-date">Published: March 2026</span>
+                    <h3 class="article-card-title">Virtual Clinical Simulation in Physiotherapy Education: Accelerating Diagnostic Competence with PhysioSim</h3>
+                    <p class="article-card-excerpt">
+                        Discover how interactive virtual clinical simulators and 3D kinematic tools reduce cognitive load, hone differential diagnostic skills, and bridge anatomy theory with practical clinical intuition.
+                    </p>
+                    <a href="article-virtual-simulation-physiosim-en.html" class="read-more-btn">Explore simulation research &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Existing Research Article: AI LSTM in Combat Sports -->
+            <article class="article-card" data-category="ai">
+                <div class="article-card-content">
+                    <span class="article-tag tag-ai">AI & Machine Learning</span>
+                    <span class="article-date">Published: 2025</span>
+                    <h3 class="article-card-title">Artificial Intelligence in Combat Sports: How LSTM Neural Networks Predict Striking Power</h3>
+                    <p class="article-card-excerpt">
+                        Is it possible to measure striking impact without costly dynamometric plates? Our research demonstrates that Deep Learning LSTM models predict kinetic strike power from wearable sensor kinetics.
+                    </p>
+                    <a href="article-lstm-artificial-intelligence-en.html" class="read-more-btn">Read full analysis &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Existing Research Article: Kicking Biomechanics -->
+            <article class="article-card" data-category="sports">
+                <div class="article-card-content">
+                    <span class="article-tag tag-sports">Sports Biomechanics</span>
                     <span class="article-date">Published: October 2023</span>
                     <h3 class="article-card-title">How Hand and Trunk Movement Influences Kicking Power? Biomechanical Research in Taekwon-do</h3>
                     <p class="article-card-excerpt">
@@ -101,12 +164,12 @@
                 </div>
             </article>
 
-            <!-- Kolejne artykuły będą trafiały tutaj -->
-            <!-- Artykuł 2 -->
-            <article class="article-card">
+            <!-- Existing Research Article: Boxing Jab vs Cross -->
+            <article class="article-card" data-category="sports">
                 <div class="article-card-content">
+                    <span class="article-tag tag-sports">Sports Biomechanics</span>
                     <span class="article-date">Published: 2024</span>
-                    <h3 class="article-card-title">Jab or Cross? What Determines the Power of a Knockout Punch in Boxing.</h3>
+                    <h3 class="article-card-title">Jab or Cross? What Determines the Power of a Knockout Punch in Boxing</h3>
                     <p class="article-card-excerpt">
                         Higher speed doesn't always equal greater striking power. View the results of the latest biomechanical research on the differences between the lead hand (jab) and rear hand (cross) punch.
                     </p>
@@ -114,121 +177,118 @@
                 </div>
             </article>
 
-            <!-- Artykuł 3 -->
-            <article class="article-card">
+            <!-- Existing Research Article: Karate Target vs Air -->
+            <article class="article-card" data-category="sports">
                 <div class="article-card-content">
+                    <span class="article-tag tag-sports">Sports Biomechanics</span>
                     <span class="article-date">Published: 2025</span>
-                    <h3 class="article-card-title">Kicking in the Air vs a Target? Why Traditional Karate Training Requires Changes.</h3>
+                    <h3 class="article-card-title">Kicking in the Air vs a Target? Why Traditional Karate Training Requires Changes</h3>
                     <p class="article-card-excerpt">
-                        In traditional karate, we spend hundreds of hours executing techniques in the air. However, my latest research using EMG sensors exposes that the human body behaves entirely differently when it must hit a physical target.
+                        In traditional martial arts, hours are spent executing strikes in the air. EMG sensor research proves that muscle activation and joint deceleration dynamics change completely when striking physical targets.
                     </p>
                     <a href="article-biomechanics-karate-en.html" class="read-more-btn">Read full analysis &rarr;</a>
                 </div>
             </article>
 
-            <!-- Artykuł 4 -->
-            <article class="article-card">
+            <!-- Existing Research Article: Effective Mass in Boxing -->
+            <article class="article-card" data-category="sports">
                 <div class="article-card-content">
+                    <span class="article-tag tag-sports">Sports Biomechanics</span>
                     <span class="article-date">Published: 2024</span>
-                    <h3 class="article-card-title">Effective Mass in Boxing. Why Heavy Weight Doesn't Guarantee a Knockout?</h3>
+                    <h3 class="article-card-title">Effective Mass in Boxing: Why Heavy Weight Doesn't Guarantee a Knockout</h3>
                     <p class="article-card-excerpt">
-                        What exactly is 'effective mass' and why do you utilize a mere fraction of your body weight during a punch? A biomechanical analysis of mass transfer in boxing strikes.
+                        What exactly is 'effective mass' and why do you utilize only a fraction of your body weight during impact? A biomechanical analysis of mass transfer in boxing strikes.
                     </p>
                     <a href="article-effective-mass-boxing-en.html" class="read-more-btn">Read full analysis &rarr;</a>
                 </div>
             </article>
 
-            <!-- Artykuł 5 -->
-            <article class="article-card">
+            <!-- Existing Research Article: Target Presence in Taekwondo -->
+            <article class="article-card" data-category="sports">
                 <div class="article-card-content">
-                    <span class="article-date">Published: 2025</span>
-                    <h3 class="article-card-title">Artificial Intelligence in Combat Sports. How Neural Networks Predict Striking Power?</h3>
-                    <p class="article-card-excerpt">
-                        Is it actually possible to measure a kick's colossal force without exorbitant dynamometric platforms? The results of our newest research indicate that Machine Learning models (LSTM) can calculate strike power based solely on body movement.
-                    </p>
-                    <a href="article-lstm-artificial-intelligence-en.html" class="read-more-btn">Read full analysis &rarr;</a>
-                </div>
-            </article>
-
-            <!-- Artykuł 6 -->
-            <article class="article-card">
-                <div class="article-card-content">
+                    <span class="article-tag tag-sports">Sports Biomechanics</span>
                     <span class="article-date">Published: 2021</span>
-                    <h3 class="article-card-title">Does the Presence of a Target Affect Your Kicking Speed? Biomechanical Research in Taekwon-do</h3>
+                    <h3 class="article-card-title">Does the Presence of a Target Affect Kicking Speed? Biomechanical Research in Taekwon-do</h3>
                     <p class="article-card-excerpt">
-                        Most martial arts training relies on techniques performed in the air. However, my latest research proves that your body moves fastest only when it encounters physical resistance in the form of a target pad.
+                        Laboratory motion capture proves that the presence of an impact target alters segment kinematics and peak velocity compared to strikes thrown into empty space.
                     </p>
                     <a href="article-target-effect-taekwondo-en.html" class="read-more-btn">Read full analysis &rarr;</a>
                 </div>
             </article>
 
-            <!-- Artykuł 7 -->
-            <article class="article-card">
+            <!-- Existing Research Article: Tradition vs Sport -->
+            <article class="article-card" data-category="sports">
                 <div class="article-card-content">
+                    <span class="article-tag tag-sports">Sports Biomechanics</span>
                     <span class="article-date">Published: 2022</span>
-                    <h3 class="article-card-title">Tradition vs. Sport. Which Version of the Roundhouse Kick is Faster?</h3>
+                    <h3 class="article-card-title">Tradition vs. Sport: Which Version of the Roundhouse Kick is Faster?</h3>
                     <p class="article-card-excerpt">
-                        Different competitions require different executions of techniques. We analyzed 180 roundhouse kicks performed by Taekwon-do masters to check the biomechanical differences between the traditional and sports execution.
+                        We analyzed 180 roundhouse kicks performed by Taekwon-do masters to compare the angular kinematic differences between traditional and sport tournament execution.
                     </p>
                     <a href="article-tradition-vs-sport-en.html" class="read-more-btn">View measurement results &rarr;</a>
                 </div>
             </article>
 
-            <!-- Artykuł 8 -->
-            <article class="article-card">
+            <!-- Existing Research Article: ML Stress -->
+            <article class="article-card" data-category="ai">
                 <div class="article-card-content">
+                    <span class="article-tag tag-ai">AI & Machine Learning</span>
                     <span class="article-date">Published: 2020</span>
-                    <h3 class="article-card-title">Algorithms Tracking Stress. What Determines Anxiety in Young Men?</h3>
+                    <h3 class="article-card-title">Algorithms Tracking Stress: What Determines Anxiety in Young Men?</h3>
                     <p class="article-card-excerpt">
-                        Artificial intelligence helps us analyze not only movement but also the human psyche. See how we utilized machine learning algorithms to investigate anxiety and stress levels in crisis situations.
+                        Machine learning algorithms applied to psychophysiological stress responses during high-pressure simulation scenarios.
                     </p>
                     <a href="article-machine-learning-stress-en.html" class="read-more-btn">Read full analysis &rarr;</a>
                 </div>
             </article>
 
-            <!-- Artykuł 9 -->
-            <article class="article-card">
+            <!-- Existing Research Article: Karate Injuries -->
+            <article class="article-card" data-category="sports">
                 <div class="article-card-content">
+                    <span class="article-tag tag-sports">Sports Biomechanics</span>
                     <span class="article-date">Published: 2019</span>
-                    <h3 class="article-card-title">The Price of Full Contact. Injury Analysis in Kyokushin Karate.</h3>
+                    <h3 class="article-card-title">The Price of Full Contact: Injury Analysis in Kyokushin Karate</h3>
                     <p class="article-card-excerpt">
-                        Kyokushin Karate is considered one of the toughest combat sports in the world. We analyzed the injury histories of 61 elite competitors to see what gets damaged most often on the mat and how to effectively prevent it.
+                        Epidemiological study of injury patterns in 61 elite full-contact karate competitors, outlining specific biomechanical prevention strategies.
                     </p>
                     <a href="article-karate-injuries-en.html" class="read-more-btn">Read full analysis &rarr;</a>
                 </div>
             </article>
 
-            <!-- Artykuł 10 -->
-            <article class="article-card">
+            <!-- Existing Research Article: VR in Rehab -->
+            <article class="article-card" data-category="education">
                 <div class="article-card-content">
+                    <span class="article-tag tag-education">Clinical Education</span>
                     <span class="article-date">Published: 2017</span>
-                    <h3 class="article-card-title">Virtual Reality (VR) in Physiotherapy. How Technology Protects Against Injuries?</h3>
+                    <h3 class="article-card-title">Virtual Reality (VR) in Physiotherapy: Collision Avoidance and Fall Prevention</h3>
                     <p class="article-card-excerpt">
-                        VR headsets aren't just entertainment for gamers. Discover how we utilized virtual reality to study defense reactions and prevent dangerous falls, especially among the elderly.
+                        Using immersive virtual reality to evaluate protective postural reflexes and fall avoidance mechanisms in vulnerable populations.
                     </p>
                     <a href="article-vr-collision-avoidance-en.html" class="read-more-btn">Read full analysis &rarr;</a>
                 </div>
             </article>
 
-            <!-- Artykuł 11 -->
-            <article class="article-card">
+            <!-- Existing Research Article: Taekwondo as Therapy -->
+            <article class="article-card" data-category="sports">
                 <div class="article-card-content">
+                    <span class="article-tag tag-sports">Sports Biomechanics</span>
                     <span class="article-date">Published: 2018</span>
-                    <h3 class="article-card-title">Taekwondo as Therapy. How Martial Arts Reduce Aggression?</h3>
+                    <h3 class="article-card-title">Taekwondo as Therapy: Adapted Martial Arts for Intellectual Disabilities</h3>
                     <p class="article-card-excerpt">
-                        Combat sports are often associated with aggression. However, our analysis proves that adapting Para Taekwondo rules can be a powerful tool in behavioral therapy for individuals with intellectual disabilities.
+                        Investigating the therapeutic benefits of adapted martial arts movement protocols on motor control and behavioral regulation.
                     </p>
                     <a href="article-taekwondo-therapy-disability-en.html" class="read-more-btn">Read full analysis &rarr;</a>
                 </div>
             </article>
 
-            <!-- Artykuł 12 -->
-            <article class="article-card">
+            <!-- Existing Research Article: Muay Thai Pain Perception -->
+            <article class="article-card" data-category="sports">
                 <div class="article-card-content">
+                    <span class="article-tag tag-sports">Sports Biomechanics</span>
                     <span class="article-date">Published: 2024</span>
-                    <h3 class="article-card-title">Can You Get Used to Pain? Pain Perception in Muay Thai.</h3>
+                    <h3 class="article-card-title">Pain Perception in Muay Thai: Long-Term Neuromodulation in Combat Sports</h3>
                     <p class="article-card-excerpt">
-                        Thai boxing is one of the most brutal striking sports. We tested the pain thresholds of professionals and amateurs to see if years of taking hits can "reprogram" the nervous system.
+                        Testing pressure pain thresholds in professional vs. amateur fighters to assess central sensitization and neuroplastic adaptation.
                     </p>
                     <a href="article-pain-perception-muay-thai-en.html" class="read-more-btn">Read full analysis &rarr;</a>
                 </div>
@@ -238,11 +298,7 @@
 
     </main>
 
-    
-
-    
-    
-<footer>
+    <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
@@ -253,8 +309,8 @@
                 <div class="footer-links">
                     <h4>Menu</h4>
                     <ul>
-                        <li><a href="index.html">Home</a>
-                    <a href="telerehabilitation-en.html">Telerehabilitation</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="telerehabilitation-en.html">Telerehabilitation</a></li>
                         <li><a href="about-en.html">About Me</a></li>
                         <li><a href="pricing-en.html">Support</a></li>
                         <li><a href="education-en.html">Education</a></li>
@@ -290,9 +346,31 @@
     </footer>
 
     <script>
-        // Simple mobile menu toggle
+        // Mobile menu toggle
         document.getElementById('mobile-menu').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Category Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const articleCards = document.querySelectorAll('.article-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                articleCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (filterValue === 'all' || cardCategory === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
         });
     </script>
 </body>

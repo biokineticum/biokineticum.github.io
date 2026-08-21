@@ -41,7 +41,8 @@ homepage_schema = """    <!-- Schema: WebSite, Organization & Person -->
           "sameAs": [
             "https://linkedin.com/in/dariusz-mosler-b3856768",
             "https://www.researchgate.net/profile/Dariusz-Mosler",
-            "https://orcid.org/0000-0002-8794-2994"
+            "https://orcid.org/0000-0002-8794-2994",
+            "https://www.upwork.com/freelancers/~013459feb9bed6e832"
           ]
         }
       }
@@ -74,7 +75,8 @@ service_schema_pl = """    <!-- Schema: Physician & Service -->
         "sameAs": [
           "https://linkedin.com/in/dariusz-mosler-b3856768",
           "https://www.researchgate.net/profile/Dariusz-Mosler",
-          "https://orcid.org/0000-0002-8794-2994"
+          "https://orcid.org/0000-0002-8794-2994",
+          "https://www.upwork.com/freelancers/~013459feb9bed6e832"
         ]
       },
       "hasOfferCatalog": {
@@ -130,7 +132,8 @@ service_schema_en = """    <!-- Schema: Physician & Service -->
         "sameAs": [
           "https://linkedin.com/in/dariusz-mosler-b3856768",
           "https://www.researchgate.net/profile/Dariusz-Mosler",
-          "https://orcid.org/0000-0002-8794-2994"
+          "https://orcid.org/0000-0002-8794-2994",
+          "https://www.upwork.com/freelancers/~013459feb9bed6e832"
         ]
       },
       "hasOfferCatalog": {
@@ -174,7 +177,8 @@ person_schema = """    <!-- Schema: Person (Expert Profile) -->
       "sameAs": [
         "https://linkedin.com/in/dariusz-mosler-b3856768",
         "https://www.researchgate.net/profile/Dariusz-Mosler",
-        "https://orcid.org/0000-0002-8794-2994"
+        "https://orcid.org/0000-0002-8794-2994",
+        "https://www.upwork.com/freelancers/~013459feb9bed6e832"
       ]
     }
     </script>"""

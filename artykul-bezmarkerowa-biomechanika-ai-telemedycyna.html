@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomechanika Bezmarkerowa i AI w Fizjoterapii | Biokineticum</title>
+    <meta name="description"
+        content="Jak widzenie komputerowe AI i standard Zero-LLM pozwalają na laboratoryjną analizę ruchu i równowagi podczas e-wizyty fizjoterapeutycznej.">
+
+    <link rel="canonical" href="https://biokineticum.com/artykul-bezmarkerowa-biomechanika-ai-telemedycyna.html" />
+    <link rel="alternate" hreflang="pl" href="https://biokineticum.com/artykul-bezmarkerowa-biomechanika-ai-telemedycyna.html" />
+    <link rel="alternate" hreflang="en" href="https://biokineticum.com/article-markerless-ai-telerehabilitation-en.html" />
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Biomechanika bezmarkerowa: AI (YOLOv8) i Prywatność Zero-LLM w Telerehabilitacji">
+    <meta property="og:description"
+        content="Zobacz jak zaawansowana analiza wideo i estymacja postawy mierzą kąty stawowe i balans ciała w czasie rzeczywistym z zachowaniem 100% prywatności.">
+    <meta property="og:url" content="https://biokineticum.com/artykul-bezmarkerowa-biomechanika-ai-telemedycyna.html">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-03-05T09:00:00+00:00" />
+    <meta property="article:author" content="Dr hab. Dariusz Mosler" />
+
+    <!-- Schema: Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "headline": "Biomechanika bezmarkerowa: jak widzenie komputerowe i architektura Zero-LLM rewolucjonizują telefizjoterapię",
+      "description": "Naukowe wyjaśnienie zasad estymacji postawy (pose estimation), analizy kątowej stawów, śledzenia środka ciężkości (COG) oraz kryptograficznej ochrony prywatności w e-zdrowiu.",
+      "image": "https://biokineticum.com/images/profile_hero.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Dr hab. Dariusz Mosler",
+        "url": "https://biokineticum.com/about.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Biokineticum",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://biokineticum.com/images/logo.jpg"
+        }
+      },
+      "datePublished": "2026-03-05",
+      "dateModified": "2026-03-05",
+      "mainEntityOfPage": "https://biokineticum.com/artykul-bezmarkerowa-biomechanika-ai-telemedycyna.html",
+      "about": [
+        {"@type": "MedicalSpecialty", "name": "Biomechanics"},
+        {"@type": "MedicalSpecialty", "name": "Artificial Intelligence"},
+        {"@type": "MedicalSpecialty", "name": "Telerehabilitation"}
+      ]
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Publikacje",
+        "item": "https://biokineticum.com/publikacje.html"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Biomechanika Bezmarkerowa & AI"
+      }]
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-PTSYR05SE2'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PTSYR05SE2');
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index-pl.html" class="logo"><img src="images/logo.jpg" alt="Biokineticum - Logo" class="nav-logo"></a>
+                <div class="menu-toggle" id="mobile-menu">☰</div>
+                <div class="nav-links">
+                    <a href="index-pl.html">Główna</a>
+                    <a href="telerehabilitacja.html">Telerehabilitacja</a>
+                    <a href="about.html">O mnie</a>
+                    <a href="cennik.html">Cennik</a>
+                    <a href="education.html">Edukacja</a>
+                    <a href="publikacje.html" class="active">Publikacje</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <div class="lang-switch" style="display: inline-flex; gap: 0.5rem; align-items: center; font-weight: bold; margin-left: auto;">
+                        <strong>PL</strong>
+                        <span style="color: var(--text-muted);">|</span>
+                        <a href="article-markerless-ai-telerehabilitation-en.html" style="color: var(--text-muted); text-decoration: none;">EN</a>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Kontakt</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Article Header -->
+        <header class="article-header">
+            <div class="container">
+                <span class="category">Widzenie Komputerowe & AI Biomechanika</span>
+                <h1>Biomechanika bezmarkerowa: jak widzenie komputerowe i architektura Zero-LLM rewolucjonizują telefizjoterapię</h1>
+                <div class="article-meta">
+                    Opublikowano: Marzec 2026 | Autor: dr hab. Dariusz Mosler | Czas czytania: 6 min
+                </div>
+            </div>
+        </header>
+
+        <!-- Article Body -->
+        <article class="article-body">
+
+            <div class="key-takeaways">
+                <h3>📌 Kluczowe zagadnienia analizy AI i telemedycyny</h3>
+                <ul>
+                    <li><strong>Bezmarkerowa analiza ruchu (MMC):</strong> Nowoczesne sieci neuronowe (modele YOLOv8-pose) osiągają wysoką zgodność z systemami optoelektronicznymi (Vicon/Qualisys) bez konieczności przyklejania markerów czy zakładania czujników.</li>
+                    <li><strong>Kinematyka kątowa w czasie rzeczywistym:</strong> Ciągłe obliczanie wektorów kątowych stawów (kolano, biodro, kręgosłup, bark) ujawnia subtelne kompensacje i asymetrie podczas ruchu.</li>
+                    <li><strong>Śledzenie stabilności i środka ciężkości (COG):</strong> Śledzenie punktów miednicy generuje na żywo mapę wychyleń postawy, elipsy prędkości i wskaźniki stabilności.</li>
+                    <li><strong>Standard Zero-LLM i ochrona prywatności:</strong> Modele numeryczne przetwarzają obraz lokalnie – żadne nagrania pacjenta nie trafiają do chmur generatywnych modeli językowych (LLM).</li>
+                </ul>
+            </div>
+
+            <p>
+                Tradycyjna trójwymiarowa analiza ruchu w laboratoriach biomechanicznych wymaga wielokamerowych systemów na podczerwień (np. Vicon, Qualisys) oraz precyzyjnego naklejania odblaskowych markerów na punkty kostne ciała pacjenta. Chociaż gwarantuje to milimetrową dokładność, jest to procedura skrajnie kosztowna, czasochłonna i ograniczona do zamkniętych laboratoriów.
+            </p>
+
+            <p>
+                Przełom w dziedzinie sztucznej inteligencji i <strong>bezmarkerowej analizy ruchu (Markerless Motion Capture – MMC)</strong> całkowicie zmienił te reguły. Wykorzystując algorytmy widzenia komputerowego i matematyczne modelowanie kinematyczne, jesteśmy dziś w stanie uzyskać obiektywne dane biomechaniczne za pośrednictwem zwykłej kamery internetowej.
+            </p>
+
+            <h2>1. Jak działa estymacja postawy AI podczas e-wizyty?</h2>
+
+            <p>
+                System bezmarkerowy opiera się na głębokich splotowych sieciach neuronowych (m.in. architekturze YOLOv8-pose), wytrenowanych na milionach szkieletów ludzkich. Algorytm analizuje strumień wideo z prędkością 30–60 klatek na sekundę, wykrywając kluczowe punkty anatomiczne (stawy, środek miednicy, linię barków, głowę).
+            </p>
+
+            <div class="evidence-card">
+                <strong>Walidacja naukowa w literaturze (Stenum i wsp., 2021; Wade i wsp., 2022)</strong>
+                Badania walidacyjne publikowane w <em>Journal of Biomechanics</em> i <em>IEEE Transactions on Biomedical Engineering</em> potwierdzają wysoką korelację (współczynnik ICC > 0.88) algorytmów bezmarkerowych z wielokamerowymi systemami optycznymi w pomiarze kątów stawowych podczas chodu, przysiadów i testów sięgania.
+            </div>
+
+            <p>
+                W platformie telerehabilitacyjnej <strong>Biokineticum</strong> strumień ten przetwarzany jest przez dwa dedykowane moduły:
+            </p>
+
+            <ul>
+                <li><strong>1. Analiza Ruchomości Kątowej (Joint Kinematics):</strong> Obliczanie wektorów kątowych pomiędzy segmentami ciała w czasie rzeczywistym (np. kąt zgięcia kolana, nachylenie miednicy, zakres skłonu kręgosłupa). Daje to natychmiastowe krzywe zakresu ruchu (ROM) i prędkości kątowych.</li>
+                <li><strong>2. Analiza Balansu i Środka Ciężkości (Center of Gravity – COG):</strong> Śledzenie geometrycznego środka miednicy pozwala wygenerować na żywo mapę wychyleń postawy, powierzchnię elipsy stabilności i trajektorię przemieszczeń w płaszczyźnie czołowej i strzałkowej.</li>
+            </ul>
+
+            <h2>2. Problem prywatności w e-zdrowiu: Dlaczego stosujemy standard "Zero-LLM"?</h2>
+
+            <p>
+                Wiele komercyjnych platform telemedycznych bezrefleksyjnie integruje chmurowe modele językowe (LLM). Przesyłanie obrazu z kamery pacjenta, jego twarzy czy danych biometrycznych do zewnętrznych serwerów AI rodzi olbrzymie ryzyko inwigilacji, wycieku danych i naruszenia tajemnicy medycznej.
+            </p>
+
+            <p>
+                W <strong>Biokineticum</strong> wdrożyliśmy architekturę <strong>Zero-LLM & Edge-Processing</strong> opartą na bezkompromisowej ochronie prywatności:
+            </p>
+
+            <ul>
+                <li><strong>100% Lokalne Przetwarzanie Numeryczne:</strong> Strumień wideo przetwarzany jest lokalnymi, lekkimi modelami matematycznymi. Żadne dane wideo nie służą do trenowania zewnętrznych modeli generatywnych.</li>
+                <li><strong>Szyfrowane Połączenia E2E (End-to-End):</strong> Łączymy się za pośrednictwem zaufanych, otwartoźródłowych komunikatorów wybranych przez pacjenta: <strong>Signal, Session, Telegram, WhatsApp, FaceTime czy Jitsi</strong>.</li>
+                <li><strong>Płatności Krypto:</strong> Poza tradycyjnym przelewem bankowym akceptujemy prywatne kryptowaluty (<strong>Monero – XMR, Bitcoin – BTC, USDT</strong>), gwarantując pełną dyskrecję finansową.</li>
+            </ul>
+
+            <!-- CTA Box -->
+            <div class="article-cta-box">
+                <h3>Skorzystaj z Diagnostyki Biomechanicznej AI</h3>
+                <p>Otrzymaj precyzyjną, popartą liczbami ocenę ruchomości stawów i balansu ciała przy zachowaniu 100% kryptograficznego bezpieczeństwa.</p>
+                <a href="telerehabilitacja.html" class="article-cta-btn">Zarezerwuj E-Wizytę z Analizą Ruchu (100 PLN / ~25 USD) →</a>
+            </div>
+
+            <h2>3. Zastosowanie kliniczne: Od pracy przy biurku po sport wyczynowy</h2>
+
+            <p>
+                Bezmarkerowa diagnostyka wideo otwiera nowe możliwości w zdalnej fizjoterapii:
+            </p>
+
+            <ul>
+                <li><strong>Ocena przysiadu i wykroku:</strong> Wykrywanie koślawienia kolan (knee valgus), asymetrii miednicy i nieprawidłowego zgięcia lędźwiowego.</li>
+                <li><strong>Ruchomość kręgosłupa szyjnego i lędźwiowego:</strong> Precyzyjny pomiar stopni rotacji i skłonu bocznego bez subiektywnego szacowania "na oko".</li>
+                <li><strong>Testy równowagi (Test Romberga / Stanie jednonóż):</strong> Wykrywanie deficytów propriocepcji i kontroli nerwowo-mięśniowej przed i po wdrożeniu ćwiczeń korekcyjnych.</li>
+            </ul>
+
+            <!-- Cytowania Naukowe -->
+            <div class="article-citation">
+                <strong>Literatura i cytowania naukowe:</strong><br>
+                1. Stenum, J., Rossi, C., & Roemmich, R. T. (2021). Two-dimensional video-based analysis of human gait using Pose estimation: A validation study. <em>Journal of Biomechanics</em>, 125, 110597.<br>
+                2. Wade, L., Needham, L., McGuigan, P., & Bilzon, J. (2022). Applications and limitations of markerless kinematics in sports biomechanics: A systematic review. <em>Sensors</em>, 22(14), 5220.<br>
+                3. Mosler, D., et al. (2025). Application of Deep Learning and Neural Network Modeling for Dynamic Striking Kinematics in Combat Sports. <em>Acta of Bioengineering and Biomechanics</em>.<br>
+                4. Kanko, R. M., et al. (2021). Assessment of concurrent validity of a markerless motion capture system for temporal-spatial and kinematic variables. <em>Journal of Biomechanics</em>, 127, 110665.
+            </div>
+
+            <!-- Author Bio Box -->
+            <div class="author-bio-box">
+                <img src="images/profile_hero.jpg" alt="dr hab. Dariusz Mosler" class="author-bio-img">
+                <div class="author-bio-content">
+                    <h4>dr hab. Dariusz Mosler</h4>
+                    <p>Fizjoterapeuta, biomechanik i naukowiec Data Science. Specjalizuje się w algorytmach bezmarkerowej analizy ruchu, fuzji czujników inercyjnych (IMU) oraz bezpiecznych architekturach telemedycznych. Założyciel Biokineticum.</p>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo">Biokineticum</a>
+                    <p>Diagnostyka i trening fizjoterapeutyczny oparty na dowodach naukowych i technologii pomiarowej.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Nawigacja</h4>
+                    <ul>
+                        <li><a href="index-pl.html">Główna</a></li>
+                        <li><a href="telerehabilitacja.html">Telerehabilitacja</a></li>
+                        <li><a href="publikacje.html">Publikacje</a></li>
+                        <li><a href="education.html">Edukacja</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <p>Email: biokineticum@proton.me</p>
+                    <p>Tel: +48 502 123 662</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Biokineticum. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+
+</html>

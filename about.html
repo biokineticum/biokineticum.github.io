@@ -250,6 +250,11 @@
             color: var(--text-light);
         }
 
+        .trust-btn.upwork {
+            background-color: #14a800;
+            color: #fff;
+        }
+
         .trust-btn.email {
             background-color: var(--primary-light);
         }
@@ -264,10 +269,13 @@
         .trust-btn.orcid:hover {
             color: var(--text-light);
         }
+
+        .trust-btn.upwork:hover {
+            background-color: #108a00;
+            color: #fff;
+        }
     </style>
     <!-- Schema: Person (Expert Profile) -->
-        <!-- Schema: Person (Expert Profile) -->
-        <!-- Schema: Person (Expert Profile) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -280,7 +288,8 @@
       "sameAs": [
         "https://linkedin.com/in/dariusz-mosler-b3856768",
         "https://www.researchgate.net/profile/Dariusz-Mosler",
-        "https://orcid.org/0000-0002-8794-2994"
+        "https://orcid.org/0000-0002-8794-2994",
+        "https://www.upwork.com/freelancers/~013459feb9bed6e832"
       ]
     }
     </script>
@@ -345,6 +354,30 @@
             </p>
         </section>
 
+        <!-- Sekcja Upwork Freelancer & Konsultacje -->
+        <section class="about-section" style="padding-top: 0; padding-bottom: 2rem;">
+            <div style="background: linear-gradient(135deg, rgba(20, 168, 0, 0.12) 0%, var(--bg-surface) 100%); border: 1px solid rgba(20, 168, 0, 0.35); border-radius: 12px; padding: 2.5rem 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                    <span style="background-color: #14a800; color: #ffffff; font-weight: 700; font-size: 0.85rem; padding: 0.35rem 0.85rem; border-radius: 20px; letter-spacing: 0.5px; text-transform: uppercase;">Upwork Freelancer</span>
+                    <h3 style="margin: 0; font-size: 1.5rem; color: var(--text-light);">Profil Doradczy & Data Science na Upwork</h3>
+                </div>
+                <p style="color: var(--text-main); font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Prowadzę międzynarodową działalność doradczą i ekspercką na platformie <strong>Upwork</strong>: 
+                    <a href="https://www.upwork.com/freelancers/~013459feb9bed6e832" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; font-weight: 600; text-decoration: underline;">Dariusz M. – Biomechanics Expert | Data science in sports and physiotherapy</a>.
+                    Realizuję projekty analityczne, badania telemetryczne z użyciem systemów MoCap/IMU, przetwarzanie danych biomechanicznych oraz tworzenie dedykowanych algorytmów i oprogramowania dla laboratoriów sportowych, klinik i zespołów R&amp;D na całym świecie.
+                </p>
+                <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                    <a href="https://www.upwork.com/freelancers/~013459feb9bed6e832" target="_blank" rel="noopener noreferrer" class="trust-btn upwork" style="min-width: unset;">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-3.003 0-5.265 2.155-5.836 4.97-1.579-2.025-2.776-4.545-3.329-6.988H6.551v7.652c0 2.222-1.745 4.028-3.896 4.028-2.152 0-3.897-1.806-3.897-4.028V3H0v7.652c0 3.791 3.018 6.87 6.737 6.87 3.718 0 6.736-3.079 6.736-6.87v-1.196c.477 1.442 1.341 2.924 2.502 4.148l-1.921 9.022h2.906l1.378-6.471c1.077.689 2.378 1.096 3.769 1.096 3.002 0 5.439-2.436 5.439-5.438 0-3.004-2.437-5.439-5.44-5.439z"/>
+                        </svg>
+                        Zobacz mój profil na Upwork
+                    </a>
+                    <span style="color: var(--text-muted); font-size: 0.95rem;">Dostępny do realizacji projektów R&amp;D, analizy danych i doradztwa</span>
+                </div>
+            </div>
+        </section>
+
         <!-- Doświadczenie zawodowe i kliniczne -->
         <section class="bg-light">
             <div class="section-heading">
@@ -357,6 +390,7 @@
                     </h4>
                     <ul class="info-list">
                         <li><strong>Biokineticum</strong> – Właściciel (od kwietnia 2025).</li>
+                        <li><strong>Upwork Freelancer</strong> – Międzynarodowe doradztwo i ekspertyzy: <em><a href="https://www.upwork.com/freelancers/~013459feb9bed6e832" target="_blank" rel="noopener noreferrer" style="color: var(--primary-light); text-decoration: underline;">Dariusz M. – Biomechanics Expert | Data science in sports and physiotherapy</a></em>. Realizacja projektów analitycznych, badawczych i programistycznych dla klientów z całego świata.</li>
                         <li><strong>Calmfit</strong> – Właściciel i osoba zarządzająca gabinetem przez ponad 12 lat
                             (październik 2012 – marzec 2025).</li>
                         <li><strong>Praca z pacjentami o szczególnych potrzebach</strong> – Jako fizjoterapeuta od lat
@@ -439,6 +473,16 @@
                     LinkedIn
                 </a>
 
+                <!-- Upwork -->
+                <a href="https://www.upwork.com/freelancers/~013459feb9bed6e832" target="_blank" rel="noopener noreferrer"
+                    class="trust-btn upwork">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-3.003 0-5.265 2.155-5.836 4.97-1.579-2.025-2.776-4.545-3.329-6.988H6.551v7.652c0 2.222-1.745 4.028-3.896 4.028-2.152 0-3.897-1.806-3.897-4.028V3H0v7.652c0 3.791 3.018 6.87 6.737 6.87 3.718 0 6.736-3.079 6.736-6.87v-1.196c.477 1.442 1.341 2.924 2.502 4.148l-1.921 9.022h2.906l1.378-6.471c1.077.689 2.378 1.096 3.769 1.096 3.002 0 5.439-2.436 5.439-5.438 0-3.004-2.437-5.439-5.44-5.439z" />
+                    </svg>
+                    Upwork
+                </a>
+
                 <!-- Email -->
                 <a href="mailto:dariusz.mosler@gmail.com" class="trust-btn email">
                     <svg viewBox="0 0 24 24">
@@ -495,6 +539,8 @@
                         <li><a href="https://www.tiktok.com/@biokineticum" target="_blank">TikTok</a></li>
                         <li><a href="https://www.linkedin.com/in/dariusz-mosler-b3856768/?locale=pl"
                                 target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.upwork.com/freelancers/~013459feb9bed6e832"
+                                target="_blank" rel="noopener noreferrer">Upwork</a></li>
                     </ul>
                 </div>
             </div>
