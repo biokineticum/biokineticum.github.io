@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /*_backup_*.html
+Disallow: /english.html
 
 Sitemap: https://biokineticum.com/sitemap.xml
