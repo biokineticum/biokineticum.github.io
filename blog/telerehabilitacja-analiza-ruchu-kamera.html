@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bezmarkerowy zakres ruchu i balans z kamery w domu | Biokineticum</title>
+    <meta name="description" content="Jak Biokineticum mierzy zakres ruchu stawów i balans z kamery modelem YOLOv8 — szyfrowane komunikatory, bez LLM, od ok. 25 USD / 100 PLN.">
+    <link rel="canonical" href="https://biokineticum.com/blog/telerehabilitacja-analiza-ruchu-kamera.html" />
+    <link rel="alternate" hreflang="en" href="https://biokineticum.com/blog/markerless-telerehabilitation-rom.html" />
+    <link rel="alternate" hreflang="pl" href="https://biokineticum.com/blog/telerehabilitacja-analiza-ruchu-kamera.html" />
+    <link rel="alternate" hreflang="x-default" href="https://biokineticum.com/blog/markerless-telerehabilitation-rom.html" />
+    <link rel="alternate" type="application/rss+xml" title="Biokineticum Blog (EN)" href="https://biokineticum.com/blog/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Biokineticum Blog (PL)" href="https://biokineticum.com/blog/rss-pl.xml" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../blog.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Telerehabilitacja z kamery: YOLOv8, zakres ruchu i balans bez dodatkowych czujników">
+    <meta property="og:description" content="Jak Biokineticum mierzy zakres ruchu stawów i balans z kamery modelem YOLOv8 — szyfrowane komunikatory, bez LLM, od ok. 25 USD / 100 PLN.">
+    <meta property="og:url" content="https://biokineticum.com/blog/telerehabilitacja-analiza-ruchu-kamera.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://biokineticum.com/images/telerehab_preview.jpg">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="article:published_time" content="2026-08-19T08:00:00+00:00" />
+    <meta property="article:modified_time" content="2026-08-19T08:00:00+00:00" />
+    <meta property="article:author" content="Dr. hab. Dariusz Mosler" />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Zakres ruchu i balans z kamery internetowej w domu",
+  "description": "Jak Biokineticum mierzy zakres ruchu stawów i balans z kamery modelem YOLOv8 — szyfrowane komunikatory, bez LLM, od ok. 25 USD / 100 PLN.",
+  "image": "https://biokineticum.com/images/telerehab_preview.jpg",
+  "datePublished": "2026-08-19",
+  "dateModified": "2026-08-19",
+  "inLanguage": "pl",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://biokineticum.com/blog/telerehabilitacja-analiza-ruchu-kamera.html"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Dr. hab. Dariusz Mosler",
+    "url": "https://biokineticum.com/about.html",
+    "sameAs": [
+      "https://linkedin.com/in/dariusz-mosler-b3856768",
+      "https://www.researchgate.net/profile/Dariusz-Mosler",
+      "https://orcid.org/0000-0002-8794-2994"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Biokineticum",
+    "url": "https://biokineticum.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://biokineticum.com/images/logo.jpg"
+    },
+    "email": "biokineticum@proton.me"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Blog",
+      "item": "https://biokineticum.com/blog/index-pl.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Zakres ruchu z kamery"
+    }
+  ]
+}
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-PTSYR05SE2'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PTSYR05SE2');
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index-pl.html" class="logo"><img src="../images/logo.jpg" alt="Biokineticum - Logo"
+                        class="nav-logo"></a>
+                <div class="menu-toggle" id="mobile-menu">☰</div>
+                <div class="nav-links">
+                    <a href="../index-pl.html">Główna</a>
+                    <a href="../telerehabilitacja.html">Telerehabilitacja</a>
+                    <a href="../about.html">O mnie</a>
+                    <a href="../cennik.html">Wsparcie</a>
+                    <a href="../education.html">Education Software</a>
+                    <a href="../noitom.html">Noitom Polska</a>
+                    <a href="../publikacje.html">Publikacje</a>
+                    <a href="index-pl.html" class="active">Blog</a>
+                    <a href="../portfolio.html">Portfolio</a>
+                    <div class="lang-switch" style="display: inline-flex; gap: 0.5rem; align-items: center; font-weight: bold; margin-left: auto;"><strong>PL</strong> <span style="color: var(--text-muted);">|</span> <a href="markerless-telerehabilitation-rom.html" style="color: var(--text-muted); text-decoration: none;">EN</a></div>
+                    <a href="../contact.html" class="btn btn-primary">Kontakt</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <header class="article-header">
+            <div class="container">
+                <span class="category">Telerehabilitacja / Analiza ruchu</span>
+                <h1>Zakres ruchu i balans z kamery internetowej w domu</h1>
+                <div class="article-meta">
+                    Opublikowano: 19 sierpnia 2026 | Czas czytania: 8 min | dr hab. Dariusz Mosler
+                </div>
+            </div>
+        </header>
+
+        <article class="article-body">
+<p>
+Wizyta fizjoterapeutyczna nie musi zaczynać się od dojazdu i kompletu markerów odbijających światło. Dla sporej klasy pytań — czy bark wciąż wchodzi nad głowę, czy postawa „ucieka” w jedną stronę, jak wygląda przysiad z boku — kamera laptopa jest już czujnikiem. W Biokineticum prowadzę sesje telerehabilitacji, które w czasie rzeczywistym liczą kinematykę stawów i balans z tej kamery, bez dodatkowych IMU, platform siłowych i bez osobnej aplikacji klinicznej na telefonie.
+</p>
+<p>
+Potok danych jest celowo wąski. W trakcie połączenia korzystamy ze specjalistycznych modeli uczenia maszynowego, w tym YOLOv8, żeby wyciągnąć z obrazu kamery dane kinematyczne: położenia stawów, orientacje segmentów, zakres ruchu. Model nie jest chatbotem i nie jest „sztuczną inteligencją, która rozmawia z pacjentem”. Sesji nie przepuszczamy przez duży model językowy i nie wgrywamy głosu ani wizerunku na zewnętrzną farmę inferencyjną. Praca analityczna zostaje na strumieniu kinematycznym. Na tym polega warunek „zero LLM”: film kliniczny nie jest promptem.
+</p>
+
+<h2>Co kamera faktycznie mierzy</h2>
+<p>
+Pierwszy kanał to zakres ruchu. Jeśli stoisz na tyle daleko od obiektywu, żeby widać było interesujące stawy, model śledzi punkty klatka po klatce, a kąty wynikają z tych punktów. Nadal patrzę na ruch. Oprogramowanie mierzy; ja interpretuję. Jeśli biodro na kamerze wygląda na ograniczone, zatrzymujemy się i badamy je tak, jak w gabinecie — tylko miarka jest cyfrowa.
+</p>
+<p>
+Balans traktujemy jako osobny kanał, nie jako produkt uboczny „patyczaka”. Oprócz kątów stawowych algorytm szacuje środek ciężkości i buduje na żywo mapę wychyleń. To nie jest laboratoryjny ślad COP z platformy dynamometrycznej i nie będę udawał, że jest. To obraz z kamery, jak tułów i miednica dryfują, gdy stoisz albo przenosisz ciężar. Klinicyście na tym samym połączeniu wystarcza, żeby zobaczyć asymetrię i zdecydować, co testować dalej. Przetwarzanie zostaje przy danych kinematycznych; chodzi o anonimowość, nie o chmurowy pulpit z Twoją twarzą.
+</p>
+<p>
+Obok tej wizyty — nie wewnątrz niej — leży powiązany kod otwarty. Web Joint Analyzer w naszym GitHubie używa MediaPipe i Streamlit do bezmarkerowej analizy kątów z kamery albo z pliku wideo. Same sesje telerehabilitacji opisujemy na stronie jako kinematykę YOLOv8 plus mapę wychyleń. Inne narzędzia, ten sam pomysł: do wyciągnięcia liczby ze stawu nie powinien być potrzebny wolumen motion capture.
+</p>
+
+<h2>Co mówi literatura</h2>
+<p>
+Recenzowane prace o monokularnym, bezmarkerowym szacowaniu pozy nie twierdzą, że to równoważnik laboratorium optycznego. Wspierają węższe, klinicznie użyteczne twierdzenie: dla wielu ruchów rehabilitacyjnych potoki z kamery internetowej potrafią dać użyteczne szacunki zakresu ruchu — gdy oświetlenie, ubiór i kadrowanie są uczciwe.
+</p>
+<p>
+Latreche i współpracownicy porównali system oparty o MediaPipe z goniometrią dla wybranych ruchów rehabilitacyjnych i raportowali rzetelność oraz trafność spójną z użyciem w telerehabilitacji dla badanych ruchów — to nie jest blankiet na każdy staw i każdy kąt (<a href="https://doi.org/10.1016/j.measurement.2023.112826" target="_blank" rel="noopener noreferrer">Measurement, 2023</a>). Clemente i wsp. testowali MediaPipe Pose na typowych ćwiczeniach fizjoterapii narządu ruchu z monokularnego wideo 2D; zgodność z referencją była najmocniejsza m.in. dla odwiedzenia barku, zgięcia łokcia i przysiadu, a słabsza tam, gdzie dominuje okluzja albo niejednoznaczność głębokości (<a href="https://www.mdpi.com/1424-8220/24/1/206" target="_blank" rel="noopener noreferrer">Sensors, 2024</a>). Wang, Smith i Zhu porównali webcamowy potok 3D ROM (BlazePose) z systemem markerowym: wysoka rzetelność test–retest ogólnie, zgodność z optyką zależna od stawu — użyteczne do wykrywania zmian klinicznych w niektórych płaszczyznach, nie zamiennik skalibrowanego laboratorium (<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0293178" target="_blank" rel="noopener noreferrer">PLOS ONE, 2023</a>).
+</p>
+<p>
+Osobno przeglądy systematyczne telerehabilitacji prowadzonej przez fizjoterapeutę wskazują, że zdalne prowadzenie ćwiczeń bywa nie gorsze od opieki stacjonarnej pod względem funkcji, jakości życia i satysfakcji w populacjach narządu ruchu (i pokrewnych). To jest rama dostarczania usługi; bezmarkerowa kinematyka to opcjonalna warstwa pomiarowa wewnątrz niej. Te przeglądy omawiam w <a href="telerehabilitacja-dowody-naukowe.html">Czy zdalna fizjoterapia jest równie dobra jak stacjonarna?</a>.
+</p>
+<p>
+Uczciwe granice, raz na zawsze: bezmarkerowe śledzenie z kamery to nie optyczny mocap. Błędy głębokości, nietypowe pozycje i samozasłonięcie nadal bolą. Wizyta pozostaje prowadzona przez fizjoterapeutę; model nie stawia diagnozy.
+</p>
+
+<h2>Połączenie idzie komunikatorem, który już masz</h2>
+<p>
+Sesja korzysta z wideo szyfrowanego end-to-end na kanale, który wybierasz: Signal, Telegram, WhatsApp, Session, FaceTime, Google Meet albo Jitsi. Nie prosimy o konto na medycznym SaaS-ie ani o instalację klienckiej aplikacji gabinetu. Piszesz na <a href="mailto:biokineticum@proton.me">biokineticum@proton.me</a> albo przez formularz kontaktowy, ustalamy godzinę i sposób płatności, a o umówionej minucie odbierasz połączenie. Czterdzieści pięć minut: analiza ruchu, omówienie tego, co pokazała kinematyka, i plan, który da się zrobić w domu.
+</p>
+<p>
+Ta lista komunikatorów to wybór prywatności, nie odznaka marketingowa. Jeśli wideo nie wychodzi z kanału E2E, a model pozy nie jest LLM-em z polityką retencji, to zwykle zostaje wyciek przez płatność. Domyślnie przelew bankowy. Bitcoin, Monero i USDT są dostępne, jeśli rozliczenie ma zostać tak samo prywatne jak rozmowa. Adresy portfeli wychodzą dopiero przy potwierdzeniu rezerwacji.
+</p>
+
+<h2>Cena, ustawienie i czym to nie jest</h2>
+<p>
+Konsultacja kosztuje 100 PLN — około 25 USD albo 23 EUR. Kwota jest na stronie telerehabilitacji, bo stos jest prosty: Twoja kamera, szyfrowany komunikator, modele kinematyczne i fizjoterapeuta, który to oprogramowanie też pisze. W paczce nie ma dodatkowego zestawu czujników.
+</p>
+<p>
+Po Twojej stronie potrzebne są rzeczy nieefektowne. Kamera albo telefon na stabilnym stojaku, tyle podłogi, żeby zrobić krok i unieść rękę, ubranie, które nie chowa stawów, i komunikator, który naprawdę szyfruje. Jeśli w pokoju jest ciemno albo obiektyw patrzy w sufit, YOLOv8 nie wymyśli landmarków. Bezmarkerowy capture jest tak uczciwy, jak obraz.
+</p>
+<p>
+To nie jest zamiennik optycznego motion capture w laboratorium. To nie jest Perception Neuron 3, raport izokinetyczny z Biodexa ani ślad IMU z ciosu — taką robotę też robimy, innym dniem, na innym sprzęcie. To też nie jest diagnoza z algorytmu. Jeśli potrzebujesz gabinetu z kozetką, obrazowania albo testu, którego nie da się zrobić przez obiektyw, powiem to wprost. Do zakresu ruchu i balansu z domu sesja z kamerą jest najkrótszą drogą, która nadal daje liczby, na których można oprzeć ćwiczenia.
+</p>
+
+<h2>Piśmiennictwo</h2>
+<ol class="references">
+    <li>Latreche A, Kelaiaia R, Chemori A, Kerboua A. Reliability and validity analysis of MediaPipe-based measurement system for some human rehabilitation motions. <em>Measurement</em>. 2023;214:112826. <a href="https://doi.org/10.1016/j.measurement.2023.112826" target="_blank" rel="noopener noreferrer">doi:10.1016/j.measurement.2023.112826</a></li>
+    <li>Clemente C, Chambel G, Silva DCF, Montes AM, Pinto JF, Silva HP. Feasibility of 3D body tracking from monocular 2D video feeds in musculoskeletal telerehabilitation. <em>Sensors</em>. 2024;24(1):206. <a href="https://www.mdpi.com/1424-8220/24/1/206" target="_blank" rel="noopener noreferrer">doi:10.3390/s24010206</a></li>
+    <li>Wang XM, Smith DT, Zhu Q. A webcam-based machine learning approach for three-dimensional range of motion evaluation. <em>PLOS ONE</em>. 2023;18(10):e0293178. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0293178" target="_blank" rel="noopener noreferrer">doi:10.1371/journal.pone.0293178</a></li>
+    <li>Muñoz-Tomás MT, et al. Telerehabilitation as a therapeutic exercise tool versus face-to-face physiotherapy: a systematic review. <em>Int J Environ Res Public Health</em>. 2023;20(5):4358. <a href="https://pubmed.ncbi.nlm.nih.gov/36901375/" target="_blank" rel="noopener noreferrer">PubMed 36901375</a></li>
+</ol>
+
+<div class="article-citation">
+    <strong>Umów wizytę telerehabilitacyjną (45 minut)</strong><br>
+    Szyfrowany komunikator do wyboru. Kinematyka stawów YOLOv8 i śledzenie balansu na żywo. Bez LLM. Przelew albo krypto (BTC, XMR, USDT).
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem;">
+        <a href="../telerehabilitacja.html" class="btn btn-primary">Telerehabilitacja</a>
+        <a href="../telerehabilitation-en.html" class="btn btn-outline">Telerehabilitation (EN)</a>
+        <a href="../contact.html" class="btn btn-outline">Kontakt</a>
+    </div>
+</div>
+
+            <div class="author-bio-box">
+                <img src="../images/profile_hero.jpg" alt="dr hab. Dariusz Mosler" class="author-bio-img">
+                <div class="author-bio-content">
+                    <h4>Napisane przez: dr hab. Dariusz Mosler</h4>
+                    <p>Naukowiec, wykładowca i fizjoterapeuta. Łączy analitykę danych badawczych, inżynierię zdrowia i biomechanikę, aby optymalizować układ ruchu oraz profesjonalną rehabilitację pacjentów.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+<footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="../index-pl.html" class="footer-logo">Biokineticum</a>
+                    <p>Diagnostyka fizjoterapeutyczna i trening oparty na dowodach naukowych i technologii pomiarowej.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="../index-pl.html">Główna</a></li>
+                        <li><a href="../telerehabilitacja.html">Telerehabilitacja</a></li>
+                        <li><a href="../about.html">O mnie</a></li>
+                        <li><a href="../cennik.html">Wsparcie</a></li>
+                        <li><a href="../education.html">Edukacja</a></li>
+                        <li><a href="../publikacje.html">Publikacje</a></li>
+                        <li><a href="index-pl.html">Blog</a></li>
+                        <li><a href="../portfolio.html">Portfolio</a></li>
+                        <li><a href="../contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="mailto:biokineticum@proton.me">biokineticum@proton.me</a></li>
+                        <li><a href="tel:+48502123662">+48 502 123 662</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Social Media</h4>
+                    <ul>
+                        <li><a href="https://www.youtube.com/channel/UCtLfQe0JELJEqdoDfkYbe2Q" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                        <li><a href="https://www.instagram.com/biokineticum/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@biokineticum" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                        <li><a href="https://linkedin.com/in/dariusz-mosler-b3856768" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Biokineticum. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

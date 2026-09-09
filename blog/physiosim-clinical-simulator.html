@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysioSim Clinical Simulator on Telegram | Biokineticum</title>
+    <meta name="description" content="PhysioSim is a Telegram Mini App for physiotherapy students: history, Lasègue, Phalen, Tinel, Lachman, imaging, and an automatic diagnostic-accuracy report.">
+    <link rel="canonical" href="https://biokineticum.com/blog/physiosim-clinical-simulator.html" />
+    <link rel="alternate" hreflang="en" href="https://biokineticum.com/blog/physiosim-clinical-simulator.html" />
+    <link rel="alternate" hreflang="pl" href="https://biokineticum.com/blog/physiosim-symulator-kliniczny.html" />
+    <link rel="alternate" hreflang="x-default" href="https://biokineticum.com/blog/physiosim-clinical-simulator.html" />
+    <link rel="alternate" type="application/rss+xml" title="Biokineticum Blog (EN)" href="https://biokineticum.com/blog/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Biokineticum Blog (PL)" href="https://biokineticum.com/blog/rss-pl.xml" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../blog.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="PhysioSim Telegram Mini App: clinical reasoning without a real patient at risk">
+    <meta property="og:description" content="PhysioSim is a Telegram Mini App for physiotherapy students: history, Lasègue, Phalen, Tinel, Lachman, imaging, and an automatic diagnostic-accuracy report.">
+    <meta property="og:url" content="https://biokineticum.com/blog/physiosim-clinical-simulator.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://biokineticum.com/images/physiosim_app.png">
+    <meta property="og:locale" content="en_GB">
+    <meta property="article:published_time" content="2026-08-19T08:00:00+00:00" />
+    <meta property="article:modified_time" content="2026-08-19T08:00:00+00:00" />
+    <meta property="article:author" content="Dr. hab. Dariusz Mosler" />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "PhysioSim: orthopaedic tests, imaging, and a diagnostic-accuracy report",
+  "description": "PhysioSim is a Telegram Mini App for physiotherapy students: history, Lasègue, Phalen, Tinel, Lachman, imaging, and an automatic diagnostic-accuracy report.",
+  "image": "https://biokineticum.com/images/physiosim_app.png",
+  "datePublished": "2026-08-19",
+  "dateModified": "2026-08-19",
+  "inLanguage": "en",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://biokineticum.com/blog/physiosim-clinical-simulator.html"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Dr. hab. Dariusz Mosler",
+    "url": "https://biokineticum.com/about-en.html",
+    "sameAs": [
+      "https://linkedin.com/in/dariusz-mosler-b3856768",
+      "https://www.researchgate.net/profile/Dariusz-Mosler",
+      "https://orcid.org/0000-0002-8794-2994"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Biokineticum",
+    "url": "https://biokineticum.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://biokineticum.com/images/logo.jpg"
+    },
+    "email": "biokineticum@proton.me"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Blog",
+      "item": "https://biokineticum.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "PhysioSim simulator"
+    }
+  ]
+}
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-PTSYR05SE2'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PTSYR05SE2');
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo"><img src="../images/logo.jpg" alt="Biokineticum - Logo"
+                        class="nav-logo"></a>
+                <div class="menu-toggle" id="mobile-menu">☰</div>
+                <div class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../telerehabilitation-en.html">Telerehabilitation</a>
+                    <a href="../about-en.html">About Me</a>
+                    <a href="../pricing-en.html">Support</a>
+                    <a href="../education-en.html">Education Software</a>
+                    <a href="../noitom-en.html">Noitom Poland</a>
+                    <a href="../publications-en.html">Publications</a>
+                    <a href="index.html" class="active">Blog</a>
+                    <a href="../portfolio-en.html">Portfolio</a>
+                    <div class="lang-switch" style="display: inline-flex; gap: 0.5rem; align-items: center; font-weight: bold; margin-left: auto;"><a href="physiosim-symulator-kliniczny.html" style="color: var(--text-muted); text-decoration: none;">PL</a> <span style="color: var(--text-muted);">|</span> <strong>EN</strong></div>
+                    <a href="../contact-en.html" class="btn btn-primary">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <header class="article-header">
+            <div class="container">
+                <span class="category">Education / Clinical reasoning</span>
+                <h1>PhysioSim: orthopaedic tests, imaging, and a diagnostic-accuracy report</h1>
+                <div class="article-meta">
+                    Published: 19 August 2026 | Read time: 7 min | Dr. hab. Dariusz Mosler
+                </div>
+            </div>
+        </header>
+
+        <article class="article-body">
+<p>
+Clinical reasoning is a scarce resource in a classroom. You can lecture Lasègue, Phalen, Tinel and Lachman until the names stick, and still send people into a first placement who have never had to choose the next test after a bad history. Real patients are not a sandbox. PhysioSim is the sandbox: a virtual clinical simulator for physiotherapists, running as a Telegram Mini App, where you take the role of the diagnostician without anyone’s knee hanging on your decision.
+</p>
+<p>
+The loop is the one we actually use in clinic, only compressed. You take a history. You order orthopaedic tests — Lasègue, Phalen, Tinel, Lachman among them. You look at imaging: X-ray, ultrasound, MRI. You commit to a diagnosis. The application answers with an automatic diagnostic-accuracy report. That report is the point. Guessing in private teaches less than being told, immediately, which branch of the tree you cut too early.
+</p>
+
+<h2>What the cases are for</h2>
+<p>
+PhysioSim is aimed at students and early-career therapists. Cases cover the complaints that fill outpatient diaries: spinal pain, peripheral joints, sports injuries. Diversity here is pedagogical, not cinematic. The job is to sit with incomplete information, pick a test that could change the plan, and notice when imaging is being used as a substitute for a history you did not take.
+</p>
+<p>
+I will not claim that a Mini App replaces supervised practice, a plinth, or a real Lachman on a nervous athlete. It replaces the gap before that — the years in which you can recite special tests and still freeze when the story does not match the textbook. Running it inside Telegram is a distribution choice. The app is already where students message each other; they do not need another login to a university LMS that expires at the end of term. Launch: <a href="https://t.me/physio_edu_bot/physioedu" target="_blank" rel="noopener noreferrer">t.me/physio_edu_bot/physioedu</a>.
+</p>
+
+<h2>What the literature says</h2>
+<p>
+Computerised simulation in physiotherapy education is not a Biokineticum invention. Rezayi and colleagues systematically reviewed computerised simulation tools for physiotherapy students: across sixteen studies, most quantitative work reported positive effects on knowledge, confidence, professional skills or stress reduction — with the usual caveats of small samples and short follow-up (<a href="https://doi.org/10.1155/2022/4552974" target="_blank" rel="noopener noreferrer">Biomed Res Int, 2022</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/36337839/" target="_blank" rel="noopener noreferrer">PubMed 36337839</a>). More recently, a virtual-patient resource for chronic low back pain was developed and piloted with physiotherapy students as an education tool for person-centred assessment — a concrete example of the same pedagogical idea PhysioSim pursues for orthopaedic testing and imaging choices (<a href="https://doi.org/10.3390/healthcare13070750" target="_blank" rel="noopener noreferrer">Healthcare, 2025</a>).
+</p>
+<p>
+Map that carefully to the product: PhysioSim is a Telegram mini-app with interview, selected orthopaedic tests (Lasègue, Phalen, Tinel, Lachman), imaging and an accuracy report. The literature supports simulation as a complement to placements, not a replacement. There is no published sensitivity table for PhysioSim on the site, and I will not invent one.
+</p>
+
+<h2>Education around the simulator</h2>
+<p>
+PhysioSim sits on the education page next to BioKinEdu: workshops in kinematic scripting in Python, IMU training on Noitom hardware, interactive 3D models and gait biomechanics. Universities, clinics, and coaches are the three audiences written on that page, and they want different things. A physiotherapy programme wants a safe place to fail a diagnosis. A clinic wants a way to show a patient why a joint looks the way it does. A coach wants technique broken into segments instead of adjectives.
+</p>
+<p>
+Those tracks share a bias I will own: numbers before slogans. The same lab that publishes roundhouse-kick mechanics and boxing effective mass also ships a Telegram simulator, because the people who will use Perception Neuron 3 or a webcam ROM session still have to think like clinicians first. Hardware without reasoning is a very expensive video.
+</p>
+<p>
+If you teach, send the cohort into the bot before the first OSCE-style session and debrief the reports, not the vibes. If you are early in the profession, run a spine case and a peripheral-joint case on the same evening and notice which history you keep skipping. The software will not become a better physiotherapist for you. It will make it harder to hide that you have not yet chosen a test.
+</p>
+
+<h2>References</h2>
+<ol class="references">
+    <li>Rezayi S, et al. Computerized simulation education on physiotherapy students’ skills and knowledge: a systematic review. <em>Biomed Res Int</em>. 2022;2022:4552974. <a href="https://doi.org/10.1155/2022/4552974" target="_blank" rel="noopener noreferrer">doi:10.1155/2022/4552974</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/36337839/" target="_blank" rel="noopener noreferrer">PubMed 36337839</a></li>
+    <li>Thompson K, Bathe S, Grafton K, et al. Development, implementation, and evaluation of a ‘virtual patient’ with chronic low back pain: an education resource for physiotherapy students. <em>Healthcare</em>. 2025;13(7):750. <a href="https://doi.org/10.3390/healthcare13070750" target="_blank" rel="noopener noreferrer">doi:10.3390/healthcare13070750</a></li>
+</ol>
+
+<div class="article-citation">
+    <strong>PhysioSim — virtual clinical practice</strong><br>
+    Telegram Mini App: history, orthopaedic tests (Lasègue, Phalen, Tinel, Lachman), imaging, diagnostic-accuracy report.
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem;">
+        <a href="https://t.me/physio_edu_bot/physioedu" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Launch on Telegram</a>
+        <a href="../education-en.html" class="btn btn-outline">Education software</a>
+        <a href="../education.html" class="btn btn-outline">Edukacja (PL)</a>
+    </div>
+</div>
+
+            <div class="author-bio-box">
+                <img src="../images/profile_hero.jpg" alt="Dr. hab. Dariusz Mosler" class="author-bio-img">
+                <div class="author-bio-content">
+                    <h4>Written by: Dr. hab. Dariusz Mosler</h4>
+                    <p>Scientist, lecturer, and physiotherapist. Integrates research data analytics, health engineering, and biomechanics to optimize the motor system and provide professional patient rehabilitation.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+<footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="../index.html" class="footer-logo">Biokineticum</a>
+                    <p>Physiotherapeutic diagnostics and training based on scientific evidence and measurement technology.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../telerehabilitation-en.html">Telerehabilitation</a></li>
+                        <li><a href="../about-en.html">About Me</a></li>
+                        <li><a href="../pricing-en.html">Support</a></li>
+                        <li><a href="../education-en.html">Education</a></li>
+                        <li><a href="../publications-en.html">Publications</a></li>
+                        <li><a href="index.html">Blog</a></li>
+                        <li><a href="../portfolio-en.html">Portfolio</a></li>
+                        <li><a href="../contact-en.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:biokineticum@proton.me">biokineticum@proton.me</a></li>
+                        <li><a href="tel:+48502123662">+48 502 123 662</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Social Media</h4>
+                    <ul>
+                        <li><a href="https://www.youtube.com/channel/UCtLfQe0JELJEqdoDfkYbe2Q" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                        <li><a href="https://www.instagram.com/biokineticum/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@biokineticum" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                        <li><a href="https://linkedin.com/in/dariusz-mosler-b3856768" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Biokineticum. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

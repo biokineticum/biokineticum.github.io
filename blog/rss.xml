@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Biokineticum Blog</title>
+    <link>https://biokineticum.com/blog/</link>
+    <description>Lab notes, telerehabilitation, and research explainers by Dr. hab. Dariusz Mosler.</description>
+    <language>en</language>
+    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <managingEditor>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</managingEditor>
+    <webMaster>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</webMaster>
+    <item>
+      <title>Is remote physiotherapy as good as in-person? What the reviews say</title>
+      <link>https://biokineticum.com/blog/evidence-based-telerehabilitation.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/blog/evidence-based-telerehabilitation.html</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Systematic reviews find PT-led exercise telerehabilitation often non-inferior to face-to-face care for function, QoL and satisfaction — and how Biokineticum’s live PT + markerless model fits that frame.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Markerless range of motion and balance from a home webcam</title>
+      <link>https://biokineticum.com/blog/markerless-telerehabilitation-rom.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/blog/markerless-telerehabilitation-rom.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <description>YOLOv8 on a home webcam for joint range of motion and a live sway map. Encrypted messengers, no LLM, 45 minutes from about 25 USD.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>One dataset from Biodex, Noraxon, Humac and force-plate PDFs</title>
+      <link>https://biokineticum.com/blog/kinesiology-analyzer-lab-reports.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/blog/kinesiology-analyzer-lab-reports.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <description>A native desktop tool that extracts Biodex, Noraxon, Humac and force-plate PDF/CSV reports into one multi-sensor dataset — local RAG, offline, GDPR-minded.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>High-g IMU strike diagnostics — and Perception Neuron 3 as the reference</title>
+      <link>https://biokineticum.com/blog/imu-strike-diagnostics.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/blog/imu-strike-diagnostics.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Open high-g IMU hardware (up to 200 g) for combat-sport strikes, firmware and Python, next to Noitom Perception Neuron 3 as a portable reference system.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>PhysioSim: orthopaedic tests, imaging, and a diagnostic-accuracy report</title>
+      <link>https://biokineticum.com/blog/physiosim-clinical-simulator.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/blog/physiosim-clinical-simulator.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <description>A Telegram Mini App for physiotherapy students: history, Lasègue, Phalen, Tinel, Lachman, imaging, and an automatic diagnostic-accuracy report.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>How Hand and Trunk Movement Influences Kicking Power? Biomechanical Research in Taekwon-do</title>
+      <link>https://biokineticum.com/article-biomechanics-kicking-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-biomechanics-kicking-en.html</guid>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <description>Did you know that a powerful roundhouse kick depends heavily on what your arms and trunk are doing? We tested 13 elite athletes in the laboratory to understand what optimizes energy transfer to the striking foot.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Jab or Cross? What Determines the Power of a Knockout Punch in Boxing.</title>
+      <link>https://biokineticum.com/article-biomechanics-boxing-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-biomechanics-boxing-en.html</guid>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <description>Higher speed doesn't always equal greater striking power. View the results of the latest biomechanical research on the differences between the lead hand (jab) and rear hand (cross) punch.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Kicking in the Air vs a Target? Why Traditional Karate Training Requires Changes.</title>
+      <link>https://biokineticum.com/article-biomechanics-karate-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-biomechanics-karate-en.html</guid>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <description>In traditional karate, we spend hundreds of hours executing techniques in the air. However, my latest research using EMG sensors exposes that the human body behaves entirely differently when it must hit a physical target.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Effective Mass in Boxing. Why Heavy Weight Doesn't Guarantee a Knockout?</title>
+      <link>https://biokineticum.com/article-effective-mass-boxing-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-effective-mass-boxing-en.html</guid>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <description>What exactly is 'effective mass' and why do you utilize a mere fraction of your body weight during a punch? A biomechanical analysis of mass transfer in boxing strikes.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Artificial Intelligence in Combat Sports. How Neural Networks Predict Striking Power?</title>
+      <link>https://biokineticum.com/article-lstm-artificial-intelligence-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-lstm-artificial-intelligence-en.html</guid>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <description>Is it actually possible to measure a kick's colossal force without exorbitant dynamometric platforms? The results of our newest research indicate that Machine Learning models (LSTM) can calculate strike power based solely on body movement.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Does the Presence of a Target Affect Your Kicking Speed? Biomechanical Research in Taekwon-do</title>
+      <link>https://biokineticum.com/article-target-effect-taekwondo-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-target-effect-taekwondo-en.html</guid>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <description>Most martial arts training relies on techniques performed in the air. However, my latest research proves that your body moves fastest only when it encounters physical resistance in the form of a target pad.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Tradition vs. Sport. Which Version of the Roundhouse Kick is Faster?</title>
+      <link>https://biokineticum.com/article-tradition-vs-sport-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-tradition-vs-sport-en.html</guid>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <description>Different competitions require different executions of techniques. We analyzed 180 roundhouse kicks performed by Taekwon-do masters to check the biomechanical differences between the traditional and sports execution.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Algorithms Tracking Stress. What Determines Anxiety in Young Men?</title>
+      <link>https://biokineticum.com/article-machine-learning-stress-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-machine-learning-stress-en.html</guid>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <description>Artificial intelligence helps us analyze not only movement but also the human psyche. See how we utilized machine learning algorithms to investigate anxiety and stress levels in crisis situations.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>The Price of Full Contact. Injury Analysis in Kyokushin Karate.</title>
+      <link>https://biokineticum.com/article-karate-injuries-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-karate-injuries-en.html</guid>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <description>Kyokushin Karate is considered one of the toughest combat sports in the world. We analyzed the injury histories of 61 elite competitors to see what gets damaged most often on the mat and how to effectively prevent it.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Virtual Reality (VR) in Physiotherapy. How Technology Protects Against Injuries?</title>
+      <link>https://biokineticum.com/article-vr-collision-avoidance-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-vr-collision-avoidance-en.html</guid>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <description>VR headsets aren't just entertainment for gamers. Discover how we utilized virtual reality to study defense reactions and prevent dangerous falls, especially among the elderly.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Taekwondo as Therapy. How Martial Arts Reduce Aggression?</title>
+      <link>https://biokineticum.com/article-taekwondo-therapy-disability-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-taekwondo-therapy-disability-en.html</guid>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      <description>Combat sports are often associated with aggression. However, our analysis proves that adapting Para Taekwondo rules can be a powerful tool in behavioral therapy for individuals with intellectual disabilities.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Can You Get Used to Pain? Pain Perception in Muay Thai.</title>
+      <link>https://biokineticum.com/article-pain-perception-muay-thai-en.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/article-pain-perception-muay-thai-en.html</guid>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <description>Thai boxing is one of the most brutal striking sports. We tested the pain thresholds of professionals and amateurs to see if years of taking hits can &quot;reprogram&quot; the nervous system.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+  </channel>
+</rss>

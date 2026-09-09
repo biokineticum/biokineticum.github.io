@@ -294,4 +294,78 @@
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
+<url> nodes to the existing sitemap.xml (or use the full sitemap.xml in this package). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://biokineticum.com/blog/</loc>
+      <lastmod>2026-09-09</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+<url>
+      <loc>https://biokineticum.com/blog/index-pl.html</loc>
+      <lastmod>2026-09-09</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+<url>
+      <loc>https://biokineticum.com/blog/evidence-based-telerehabilitation.html</loc>
+      <lastmod>2026-09-09</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+<url>
+      <loc>https://biokineticum.com/blog/telerehabilitacja-dowody-naukowe.html</loc>
+      <lastmod>2026-09-09</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+<url>
+      <loc>https://biokineticum.com/blog/markerless-telerehabilitation-rom.html</loc>
+      <lastmod>2026-08-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+<url>
+      <loc>https://biokineticum.com/blog/telerehabilitacja-analiza-ruchu-kamera.html</loc>
+      <lastmod>2026-08-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+<url>
+      <loc>https://biokineticum.com/blog/kinesiology-analyzer-lab-reports.html</loc>
+      <lastmod>2026-08-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+<url>
+      <loc>https://biokineticum.com/blog/analizator-kinezjologii-raporty.html</loc>
+      <lastmod>2026-08-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+<url>
+      <loc>https://biokineticum.com/blog/imu-strike-diagnostics.html</loc>
+      <lastmod>2026-08-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+<url>
+      <loc>https://biokineticum.com/blog/diagnostyka-uderzen-imu.html</loc>
+      <lastmod>2026-08-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+<url>
+      <loc>https://biokineticum.com/blog/physiosim-clinical-simulator.html</loc>
+      <lastmod>2026-08-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+<url>
+      <loc>https://biokineticum.com/blog/physiosim-symulator-kliniczny.html</loc>
+      <lastmod>2026-08-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
 </urlset>
