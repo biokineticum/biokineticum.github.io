@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Blog Biokineticum</title>
+    <link>https://biokineticum.com/blog/index-pl.html</link>
+    <description>Notatki laboratoryjne, telerehabilitacja i omówienia badań dr. hab. Dariusza Moslera.</description>
+    <language>pl</language>
+    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <managingEditor>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</managingEditor>
+    <webMaster>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</webMaster>
+    <item>
+      <title>Czy zdalna fizjoterapia jest równie dobra jak stacjonarna? Co mówią przeglądy</title>
+      <link>https://biokineticum.com/blog/telerehabilitacja-dowody-naukowe.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/blog/telerehabilitacja-dowody-naukowe.html</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Przeglądy systematyczne: telerehabilitacja ćwiczeniowa prowadzona przez PT bywa nie gorsza od opieki stacjonarnej pod względem funkcji, QoL i satysfakcji — i jak model Biokineticum mieści się w tej ramie.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Zakres ruchu i balans z kamery internetowej w domu</title>
+      <link>https://biokineticum.com/blog/telerehabilitacja-analiza-ruchu-kamera.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/blog/telerehabilitacja-analiza-ruchu-kamera.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <description>YOLOv8 na kamerze w domu: zakres ruchu stawów i mapa wychyleń na żywo. Szyfrowane komunikatory, bez LLM, 45 minut od ok. 100 PLN.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Jeden zbiór danych z PDF-ów Biodex, Noraxon, Humac i platform sił</title>
+      <link>https://biokineticum.com/blog/analizator-kinezjologii-raporty.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/blog/analizator-kinezjologii-raporty.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Natywna aplikacja pulpitu, która wyciąga raporty PDF/CSV z Biodexa, Noraxona, Humaca i platform sił do jednego zbioru — lokalny RAG, offline, pod RODO.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Diagnostyka uderzeń IMU wysokiego g — i Perception Neuron 3 jako odniesienie</title>
+      <link>https://biokineticum.com/blog/diagnostyka-uderzen-imu.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/blog/diagnostyka-uderzen-imu.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Otwarty hardware IMU wysokiego g (do 200 g) pod uderzenia w sportach walki, firmware i Python, obok Noitom Perception Neuron 3 jako przenośnego odniesienia.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>PhysioSim: testy ortopedyczne, obrazowanie i raport celności diagnostycznej</title>
+      <link>https://biokineticum.com/blog/physiosim-symulator-kliniczny.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/blog/physiosim-symulator-kliniczny.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Mini App w Telegramie dla studentów fizjoterapii: wywiad, Lasègue, Phalen, Tinel, Lachman, obrazowanie i automatyczny raport celności diagnostycznej.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Jak praca rąk i tułowia wpływa na siłę kopnięcia? Badania biomechaniczne w Taekwon-do</title>
+      <link>https://biokineticum.com/artykul-biomechanika-kopniecia.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-biomechanika-kopniecia.html</guid>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <description>Czy wiesz, że silne kopnięcie okrężne zależy w dużej mierze od tego, co robią Twoje ręce i tułów? Przebadaliśmy w laboratorium 13 elitarnych zawodników, aby zrozumieć, co optymalizuje transfer energii do stopy uderzającej.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Prawy prosty czy lewy prosty? Co decyduje o sile nokautującego ciosu w boksie.</title>
+      <link>https://biokineticum.com/artykul-biomechanika-boksu.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-biomechanika-boksu.html</guid>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <description>Większa szybkość nie zawsze oznacza większą siłę uderzenia. Zobacz wyniki najnowszych badań biomechanicznych nad różnicami między uderzeniem z ręki przedniej (jab) a tylnej (cross).</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Kopanie w powietrze czy w tarczę? Dlaczego tradycyjny trening karate wymaga zmian.</title>
+      <link>https://biokineticum.com/artykul-biomechanika-karate.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-biomechanika-karate.html</guid>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <description>W tradycyjnym karate spędzamy setki godzin na wykonywaniu technik w powietrze. Moje najnowsze badania z wykorzystaniem czujników EMG pokazują jednak, że ludzkie ciało zachowuje się zupełnie inaczej, gdy musi uderzyć w fizyczny cel.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Masa efektywna w boksie. Dlaczego duża waga nie gwarantuje nokautu?</title>
+      <link>https://biokineticum.com/artykul-masa-efektywna-boks.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-masa-efektywna-boks.html</guid>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <description>Czym jest 'masa efektywna' i dlaczego podczas ciosu wykorzystujesz zaledwie 3% wagi swojego ciała? Analiza biomechaniczna transferu masy w ciosach bokserskich.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Sztuczna Inteligencja w sportach walki. Jak sieci neuronowe przewidują siłę ciosu?</title>
+      <link>https://biokineticum.com/artykul-lstm-sztuczna-inteligencja.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-lstm-sztuczna-inteligencja.html</guid>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <description>Czy można zmierzyć siłę kopnięcia bez drogich platform dynamometrycznych? Wyniki naszych najnowszych badań pokazują, że modele uczenia maszynowego (LSTM) potrafią z ogromną dokładnością obliczyć siłę uderzenia na podstawie ruchu samego ciała.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Czy obecność celu wpływa na szybkość Twojego kopnięcia? Badania biomechaniczne Taekwon-do</title>
+      <link>https://biokineticum.com/artykul-wplyw-celu-taekwondo.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-wplyw-celu-taekwondo.html</guid>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <description>Większość treningów sportów walki opiera się na technikach wykonywanych w powietrze. Moje najnowsze badania udowadniają jednak, że Twoje ciało porusza się najszybciej dopiero wtedy, gdy napotka fizyczny opór w postaci tarczy.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Tradycja kontra sport. Która wersja kopnięcia okrężnego jest szybsza?</title>
+      <link>https://biokineticum.com/artykul-tradycja-vs-sport.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-tradycja-vs-sport.html</guid>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <description>Różne zawody wymagają różnego wykonania technik. Wzięliśmy pod lupę 180 kopnięć okrężnych wykonanych przez mistrzów Taekwon-do, aby sprawdzić różnice biomechaniczne między wykonaniem tradycyjnym a sportowym.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Algorytmy na tropie stresu. Co determinuje lęk u młodych mężczyzn?</title>
+      <link>https://biokineticum.com/artykul-machine-learning-stres.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-machine-learning-stres.html</guid>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <description>Sztuczna inteligencja pomaga nam analizować nie tylko ruch, ale i ludzką psychikę. Zobacz, jak wykorzystaliśmy algorytmy uczenia maszynowego (Machine Learning) do zbadania poziomu lęku i stresu w sytuacjach kryzysowych.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Cena pełnego kontaktu. Analiza kontuzji w Karate Kyokushin.</title>
+      <link>https://biokineticum.com/artykul-kontuzje-karate.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-kontuzje-karate.html</guid>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <description>Karate Kyokushin uchodzi za jeden z najtwardszych sportów walki na świecie. Przeanalizowaliśmy historię urazów 61 elitarnych zawodników, aby sprawdzić, co najczęściej ulega uszkodzeniu na macie i jak skutecznie temu zapobiegać.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Wirtualna Rzeczywistość (VR) w fizjoterapii. Jak technologia chroni przed urazami?</title>
+      <link>https://biokineticum.com/artykul-vr-unikanie-kolizji.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-vr-unikanie-kolizji.html</guid>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <description>Gogle VR to nie tylko rozrywka dla graczy. Zobacz, jak wykorzystaliśmy wirtualną rzeczywistość do badania reakcji obronnych i zapobiegania groźnym upadkom m.in. u osób starszych.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Taekwondo jako terapia. Jak sztuki walki redukują agresję?</title>
+      <link>https://biokineticum.com/artykul-terapia-taekwondo-niepelnosprawnosc.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-terapia-taekwondo-niepelnosprawnosc.html</guid>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      <description>Sporty walki często kojarzą się z agresją. Nasza analiza udowadnia jednak, że adaptacja zasad Para Taekwondo może stanowić potężne narzędzie w terapii behawioralnej osób z niepełnosprawnością intelektualną.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+    <item>
+      <title>Czy do bólu można się przyzwyczaić? Percepcja bólu w Muay Thai.</title>
+      <link>https://biokineticum.com/artykul-percepcja-bolu-muay-thai.html</link>
+      <guid isPermaLink="true">https://biokineticum.com/artykul-percepcja-bolu-muay-thai.html</guid>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <description>Tajski boks to jeden z najbrutalniejszych sportów uderzanych. Zbadaliśmy próg bólu u zawodowców i amatorów, aby sprawdzić, czy lata przyjmowania ciosów potrafią &quot;przeprogramować&quot; układ nerwowy.</description>
+      <author>biokineticum@proton.me (Dr. hab. Dariusz Mosler)</author>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMU Strike Diagnostics for Combat Sports | Biokineticum</title>
+    <meta name="description" content="Low-cost high-g IMUs (up to 200 g), firmware and Python for combat-sport strikes, next to Noitom Perception Neuron 3 mocap in Poland.">
+    <link rel="canonical" href="https://biokineticum.com/blog/imu-strike-diagnostics.html" />
+    <link rel="alternate" hreflang="en" href="https://biokineticum.com/blog/imu-strike-diagnostics.html" />
+    <link rel="alternate" hreflang="pl" href="https://biokineticum.com/blog/diagnostyka-uderzen-imu.html" />
+    <link rel="alternate" hreflang="x-default" href="https://biokineticum.com/blog/imu-strike-diagnostics.html" />
+    <link rel="alternate" type="application/rss+xml" title="Biokineticum Blog (EN)" href="https://biokineticum.com/blog/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Biokineticum Blog (PL)" href="https://biokineticum.com/blog/rss-pl.xml" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../blog.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="IMU strike diagnostics: open high-g hardware plus Noitom Perception Neuron 3">
+    <meta property="og:description" content="Low-cost high-g IMUs (up to 200 g), firmware and Python for combat-sport strikes, next to Noitom Perception Neuron 3 mocap in Poland.">
+    <meta property="og:url" content="https://biokineticum.com/blog/imu-strike-diagnostics.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://biokineticum.com/images/noitom_system.jpg">
+    <meta property="og:locale" content="en_GB">
+    <meta property="article:published_time" content="2026-08-19T08:00:00+00:00" />
+    <meta property="article:modified_time" content="2026-08-19T08:00:00+00:00" />
+    <meta property="article:author" content="Dr. hab. Dariusz Mosler" />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "High-g IMU strike diagnostics — and Perception Neuron 3 as the reference",
+  "description": "Low-cost high-g IMUs (up to 200 g), firmware and Python for combat-sport strikes, next to Noitom Perception Neuron 3 mocap in Poland.",
+  "image": "https://biokineticum.com/images/noitom_system.jpg",
+  "datePublished": "2026-08-19",
+  "dateModified": "2026-08-19",
+  "inLanguage": "en",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://biokineticum.com/blog/imu-strike-diagnostics.html"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Dr. hab. Dariusz Mosler",
+    "url": "https://biokineticum.com/about-en.html",
+    "sameAs": [
+      "https://linkedin.com/in/dariusz-mosler-b3856768",
+      "https://www.researchgate.net/profile/Dariusz-Mosler",
+      "https://orcid.org/0000-0002-8794-2994"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Biokineticum",
+    "url": "https://biokineticum.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://biokineticum.com/images/logo.jpg"
+    },
+    "email": "biokineticum@proton.me"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Blog",
+      "item": "https://biokineticum.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "IMU strike diagnostics"
+    }
+  ]
+}
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-PTSYR05SE2'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PTSYR05SE2');
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo"><img src="../images/logo.jpg" alt="Biokineticum - Logo"
+                        class="nav-logo"></a>
+                <div class="menu-toggle" id="mobile-menu">☰</div>
+                <div class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../telerehabilitation-en.html">Telerehabilitation</a>
+                    <a href="../about-en.html">About Me</a>
+                    <a href="../pricing-en.html">Support</a>
+                    <a href="../education-en.html">Education Software</a>
+                    <a href="../noitom-en.html">Noitom Poland</a>
+                    <a href="../publications-en.html">Publications</a>
+                    <a href="index.html" class="active">Blog</a>
+                    <a href="../portfolio-en.html">Portfolio</a>
+                    <div class="lang-switch" style="display: inline-flex; gap: 0.5rem; align-items: center; font-weight: bold; margin-left: auto;"><a href="diagnostyka-uderzen-imu.html" style="color: var(--text-muted); text-decoration: none;">PL</a> <span style="color: var(--text-muted);">|</span> <strong>EN</strong></div>
+                    <a href="../contact-en.html" class="btn btn-primary">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <header class="article-header">
+            <div class="container">
+                <span class="category">Combat sports / Inertial sensors</span>
+                <h1>High-g IMU strike diagnostics — and Perception Neuron 3 as the reference</h1>
+                <div class="article-meta">
+                    Published: 19 August 2026 | Read time: 8 min | Dr. hab. Dariusz Mosler
+                </div>
+            </div>
+        </header>
+
+        <article class="article-body">
+<p>
+Combat-sport strikes are a hostile environment for inertial sensors. A rear cross that we measured on a force plate sat around 1700 N; fist accelerations in that study reached the order of 90 m/s². Cheap consumer IMUs clip. Laboratory optical systems are accurate and immovable. Coaches still want a number they can take to the bag, not a booking in a motion-capture hall.
+</p>
+<p>
+IMU Strike Diagnostics is the hardware answer we published: a complete blueprint, firmware, and Python suite for a low-cost inertial unit rated to high-g, up to 200 g, aimed at strike diagnostics. Linear acceleration and angular velocity, logged on a device you can strap on a wrist or a shin, then processed in Python instead of locked inside a vendor GUI. Schematics and code live at <a href="https://github.com/biokineticum/imu_dareczin" target="_blank" rel="noopener noreferrer">github.com/biokineticum/imu_dareczin</a>.
+</p>
+
+<h2>Why 200 g is not a marketing round number</h2>
+<p>
+Peak linear acceleration at impact is short and ugly. If the sensor saturates, you do not get a slightly wrong peak — you get a flat line and a story about “the punch that maxed the chip”. Combat diagnostics therefore start with range, then with sample rate, then with mechanical mounting that does not itself become a second impact. Firmware has to keep the clock honest; the Python side has to segment trials the same way every afternoon.
+</p>
+<p>
+That last part is the same problem as in the lab stack. Noraxon Strike Analyzer already cuts continuous Ultium EMG and AMTI recordings into individual strikes and plots mean force profiles. The open IMU kit is the version you can build when you do not have Ultium on the trolley. Same scientific habit: segment, average, look at the outlier, do not trust a single raw spike.
+</p>
+<p>
+I will not invent a validation table for the open hardware here. The boxing paper used laboratory IMUs on wrist, forearm and upper arm plus a certified plate; that is a different instrument. The kit is a blueprint for people who want high-g traces without waiting for a grant that buys a full Noraxon set. If you need a reference system, that is a different shelf.
+</p>
+
+<h2>What the literature says</h2>
+<p>
+Wearable inertial sensors are not a gimmick when the question is joint angles outside the optical volume. Poitras and colleagues systematically reviewed M/IMU validity and reliability across joints and task complexity: criterion validity was generally stronger for simpler tasks and for lower-limb flexion–extension, with more caution needed as complexity rises (<a href="https://doi.org/10.3390/s19071555" target="_blank" rel="noopener noreferrer">Sensors, 2019</a>). Zeng et al. meta-analysed IMUs for lower-extremity running kinematics: excellent concurrent validity for several spatiotemporal outcomes and sagittal ankle angle, with more caution for other planes and parameters (<a href="https://link.springer.com/article/10.1186/s40798-022-00477-0" target="_blank" rel="noopener noreferrer">Sports Med Open, 2022</a>).
+</p>
+<p>
+The 2024 ISB recommendations on IMU joint kinematics push the field toward reproducible reporting — sensor calibration, experimental protocol, kinematic model, subject-specific calibration, quality assessment — rather than a single magic algorithm (<a href="https://doi.org/10.1016/j.jbiomech.2024.112225" target="_blank" rel="noopener noreferrer">Cereatti et al., J Biomech, 2024</a>). That framing matches how I use the stack: high-g DIY IMUs for impact peaks the full mocap suit is not built to emphasise; Perception Neuron 3 / Noitom for the movement chain that produced the peak.
+</p>
+<p>
+Honest limits: IMUs are often better than a webcam for some planes and high-rate tasks, and worse than a calibrated optical volume when you need millimetre marker trajectories. Neither replaces a force plate when you need Newtons at the bag.
+</p>
+
+<h2>Perception Neuron 3 as the reference shelf</h2>
+<p>
+Biokineticum is the official Noitom partner in Poland. Perception Neuron 3 is a portable inertial motion-capture system — Axis Studio, HTTP streaming, BVH you can actually keep — with Polish analysis software written against that pipeline. A 2026 master’s thesis I supervised at Jan Długosz University in Częstochowa, on joint tracking and angle analysis with real-time feedback for physical therapy, used Perception Neuron 3 as the reference for a markerless tool. Reported correlations ran from r = 0.6 to over 0.9. That sentence belongs to that thesis, not as a blanket accuracy claim for every IMU we ship.
+</p>
+<p>
+On GitHub, the Noitom single-sensor example shows how to stream raw acceleration from one Perception Neuron 3 unit through the Axis Studio SDK (Mocap.api) in Python and C++. That is the biofeedback path: one sensor, live telemetry, your own overlay. MotionScope 3D takes the BVH further into the browser. YouTube carries kick-analysis examples from the same toolchain. The hardware is small, relatively robust to interference, and priced for labs that cannot freeze a room for optical cameras.
+</p>
+<p>
+Packages on the Noitom page are deliberately coarse: Start (hardware and software), Sport/Pro (plus training and analysis), University (hardware plus specialised software for researchers). Training can run on the same Perception Neuron units used later for capture. I do not list street prices here; availability goes through the contact form.
+</p>
+
+<h2>How I would actually use the two together</h2>
+<p>
+High-g DIY IMUs belong on the striking limb when you care about impact peaks. Perception Neuron 3 belongs on the rest of the chain — trunk rotation, step, guard — when you care about the movement that produced the peak. The boxing work already said the quiet part: the cross is not an isolated arm; it is a path from the feet through the trunk. Measuring only the fist is how you get fast, weak punches that look good on a phone video.
+</p>
+<p>
+If you are a clinic, a university lab, or a club that wants numbers on strikes without pretending a phone accelerometer is a scientific instrument, start with the blueprint or with a Perception Neuron 3 demo. Both are documented. Neither replaces a force plate when you need Newtons at the bag. They do replace the shrug that says striking is too fast to measure.
+</p>
+
+<h2>References</h2>
+<ol class="references">
+    <li>Poitras I, Dupuis F, Bielmann M, et al. Validity and reliability of wearable sensors for joint angle estimation: a systematic review. <em>Sensors</em>. 2019;19(7):1555. <a href="https://doi.org/10.3390/s19071555" target="_blank" rel="noopener noreferrer">doi:10.3390/s19071555</a></li>
+    <li>Zeng Z, Liu Y, Hu X, Tang M, Wang L. Validity and reliability of inertial measurement units on lower extremity kinematics during running: a systematic review and meta-analysis. <em>Sports Med Open</em>. 2022;8:86. <a href="https://link.springer.com/article/10.1186/s40798-022-00477-0" target="_blank" rel="noopener noreferrer">doi:10.1186/s40798-022-00477-0</a></li>
+    <li>Cereatti A, Gurchiek R, Mündermann A, et al. ISB recommendations on wearable inertial measurement technology for joint kinematics. <em>J Biomech</em>. 2024;173:112225. <a href="https://doi.org/10.1016/j.jbiomech.2024.112225" target="_blank" rel="noopener noreferrer">doi:10.1016/j.jbiomech.2024.112225</a></li>
+    <li>Mosler D, Kacprzak J, Wąsik J. Higher values of force and acceleration in rear cross than lead jab. <em>Appl Sci</em>. 2024;14(7):2830. <a href="https://doi.org/10.3390/app14072830" target="_blank" rel="noopener noreferrer">doi:10.3390/app14072830</a></li>
+</ol>
+
+<div class="article-citation">
+    <strong>Strike diagnostics: open IMU kit and Noitom mocap</strong><br>
+    High-g hardware blueprint (up to 200 g) plus Perception Neuron 3, Axis Studio streaming, and Polish analysis software.
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem;">
+        <a href="https://github.com/biokineticum/imu_dareczin" target="_blank" rel="noopener noreferrer" class="btn btn-primary">IMU kit on GitHub</a>
+        <a href="../noitom-en.html" class="btn btn-outline">Noitom Poland</a>
+        <a href="../portfolio-en.html" class="btn btn-outline">Portfolio</a>
+    </div>
+</div>
+
+            <div class="author-bio-box">
+                <img src="../images/profile_hero.jpg" alt="Dr. hab. Dariusz Mosler" class="author-bio-img">
+                <div class="author-bio-content">
+                    <h4>Written by: Dr. hab. Dariusz Mosler</h4>
+                    <p>Scientist, lecturer, and physiotherapist. Integrates research data analytics, health engineering, and biomechanics to optimize the motor system and provide professional patient rehabilitation.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+<footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="../index.html" class="footer-logo">Biokineticum</a>
+                    <p>Physiotherapeutic diagnostics and training based on scientific evidence and measurement technology.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../telerehabilitation-en.html">Telerehabilitation</a></li>
+                        <li><a href="../about-en.html">About Me</a></li>
+                        <li><a href="../pricing-en.html">Support</a></li>
+                        <li><a href="../education-en.html">Education</a></li>
+                        <li><a href="../publications-en.html">Publications</a></li>
+                        <li><a href="index.html">Blog</a></li>
+                        <li><a href="../portfolio-en.html">Portfolio</a></li>
+                        <li><a href="../contact-en.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:biokineticum@proton.me">biokineticum@proton.me</a></li>
+                        <li><a href="tel:+48502123662">+48 502 123 662</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Social Media</h4>
+                    <ul>
+                        <li><a href="https://www.youtube.com/channel/UCtLfQe0JELJEqdoDfkYbe2Q" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                        <li><a href="https://www.instagram.com/biokineticum/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@biokineticum" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                        <li><a href="https://linkedin.com/in/dariusz-mosler-b3856768" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Biokineticum. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
