@@ -6,8 +6,7 @@ files_to_update = [
     "index.html",
     "cennik.html",
     "education.html",
-    "noitom.html", 
-    "english.html",
+        "english.html",
     "contact.html"
 ]
 
@@ -39,7 +38,7 @@ for file in files_to_update:
     # Also fix white backgrounds hardcoded in HTML if any (e.g. education.html had style="background-color: white;")
     new_content = new_content.replace('style="background-color: white;"', '')
     new_content = new_content.replace('style="background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);"', '')
-    new_content = new_content.replace('style="background: linear-gradient(135deg, #111 0%, #333 100%);"', '') # For Noitom, remove inline so CSS handles it
+    new_content = new_content.replace('style="background: linear-gradient(135deg, #111 0%, #333 100%);"', '')
     
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(new_content)

@@ -6,8 +6,7 @@ files_to_check = [
     "index.html",
     "cennik.html",
     "education.html",
-    "noitom.html", 
-    "english.html",
+        "english.html",
     "contact.html"
 ]
 

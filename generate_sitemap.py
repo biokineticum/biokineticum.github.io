@@ -22,8 +22,6 @@ CORE = {
     "contact-en.html",
     "education.html",
     "education-en.html",
-    "noitom.html",
-    "noitom-en.html",
     "portfolio.html",
     "portfolio-en.html",
     "cennik.html",

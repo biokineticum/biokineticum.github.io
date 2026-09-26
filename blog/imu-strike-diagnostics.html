@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMU Strike Diagnostics for Combat Sports | Biokineticum</title>
-    <meta name="description" content="Low-cost high-g IMUs (up to 200 g), firmware and Python for combat-sport strikes, next to Noitom Perception Neuron 3 mocap in Poland.">
+    <meta name="description" content="Low-cost high-g IMUs (up to 200 g), firmware and Python for combat-sport strikes, alongside advanced laboratory motion capture systems.">
     <link rel="canonical" href="https://biokineticum.com/blog/imu-strike-diagnostics.html" />
     <link rel="alternate" hreflang="en" href="https://biokineticum.com/blog/imu-strike-diagnostics.html" />
     <link rel="alternate" hreflang="pl" href="https://biokineticum.com/blog/diagnostyka-uderzen-imu.html" />
@@ -16,15 +16,15 @@
     <link rel="stylesheet" href="../blog.css">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="IMU strike diagnostics: open high-g hardware plus Noitom Perception Neuron 3">
-    <meta property="og:description" content="Low-cost high-g IMUs (up to 200 g), firmware and Python for combat-sport strikes, next to Noitom Perception Neuron 3 mocap in Poland.">
+    <meta property="og:title" content="IMU strike diagnostics: open high-g hardware and laboratory mocap">
+    <meta property="og:description" content="Low-cost high-g IMUs (up to 200 g), firmware and Python for combat-sport strikes, alongside advanced laboratory motion capture systems.">
     <meta property="og:url" content="https://biokineticum.com/blog/imu-strike-diagnostics.html">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="https://biokineticum.com/images/noitom_system.jpg">
+    <meta property="og:image" content="https://biokineticum.com/images/service_motor.jpg">
         <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="IMU strike diagnostics: open high-g hardware plus Noitom Perception Neuron 3">
-    <meta name="twitter:description" content="Low-cost high-g IMUs (up to 200 g), firmware and Python for combat-sport strikes, next to Noitom Perception Neuron 3 mocap in Poland.">
-    <meta name="twitter:image" content="https://biokineticum.com/images/noitom_system.jpg">
+    <meta name="twitter:title" content="IMU strike diagnostics: open high-g hardware and laboratory mocap">
+    <meta name="twitter:description" content="Low-cost high-g IMUs (up to 200 g), firmware and Python for combat-sport strikes, alongside advanced laboratory motion capture systems.">
+    <meta name="twitter:image" content="https://biokineticum.com/images/service_motor.jpg">
 <meta property="og:locale" content="en_GB">
     <meta property="article:published_time" content="2026-08-19T08:00:00+00:00" />
     <meta property="article:modified_time" content="2026-08-19T08:00:00+00:00" />
@@ -34,9 +34,9 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "High-g IMU strike diagnostics — and Perception Neuron 3 as the reference",
-  "description": "Low-cost high-g IMUs (up to 200 g), firmware and Python for combat-sport strikes, next to Noitom Perception Neuron 3 mocap in Poland.",
-  "image": "https://biokineticum.com/images/noitom_system.jpg",
+  "headline": "High-g IMU strike diagnostics — and reference motion capture instrumentation",
+  "description": "Low-cost high-g IMUs (up to 200 g), firmware and Python for combat-sport strikes, alongside advanced laboratory motion capture systems.",
+  "image": "https://biokineticum.com/images/service_motor.jpg",
   "datePublished": "2026-08-19",
   "dateModified": "2026-08-19",
   "inLanguage": "en",
@@ -110,7 +110,6 @@
                     <a href="../about-en.html">About Me</a>
                     <a href="../pricing-en.html">Support</a>
                     <a href="../education-en.html">Education Software</a>
-                    <a href="../noitom-en.html">Noitom Poland</a>
                     <a href="../publications-en.html">Publications</a>
                     <a href="index.html" class="active">Blog</a>
                     <a href="../portfolio-en.html">Portfolio</a>
@@ -125,7 +124,7 @@
         <header class="article-header">
             <div class="container">
                 <span class="category">Combat sports / Inertial sensors</span>
-                <h1>High-g IMU strike diagnostics — and Perception Neuron 3 as the reference</h1>
+                <h1>High-g IMU strike diagnostics — and reference motion capture instrumentation</h1>
                 <div class="article-meta">
                     Published: 19 August 2026 | Read time: 8 min | Dr. hab. Dariusz Mosler
                 </div>
@@ -156,29 +155,29 @@ I will not invent a validation table for the open hardware here. The boxing pape
 Wearable inertial sensors are not a gimmick when the question is joint angles outside the optical volume. Poitras and colleagues systematically reviewed M/IMU validity and reliability across joints and task complexity: criterion validity was generally stronger for simpler tasks and for lower-limb flexion–extension, with more caution needed as complexity rises (<a href="https://doi.org/10.3390/s19071555" target="_blank" rel="noopener noreferrer">Sensors, 2019</a>). Zeng et al. meta-analysed IMUs for lower-extremity running kinematics: excellent concurrent validity for several spatiotemporal outcomes and sagittal ankle angle, with more caution for other planes and parameters (<a href="https://link.springer.com/article/10.1186/s40798-022-00477-0" target="_blank" rel="noopener noreferrer">Sports Med Open, 2022</a>).
 </p>
 <p>
-The 2024 ISB recommendations on IMU joint kinematics push the field toward reproducible reporting — sensor calibration, experimental protocol, kinematic model, subject-specific calibration, quality assessment — rather than a single magic algorithm (<a href="https://doi.org/10.1016/j.jbiomech.2024.112225" target="_blank" rel="noopener noreferrer">Cereatti et al., J Biomech, 2024</a>). That framing matches how I use the stack: high-g DIY IMUs for impact peaks the full mocap suit is not built to emphasise; Perception Neuron 3 / Noitom for the movement chain that produced the peak.
+The 2024 ISB recommendations on IMU joint kinematics push the field toward reproducible reporting — sensor calibration, experimental protocol, kinematic model, subject-specific calibration, quality assessment — rather than a single magic algorithm (<a href="https://doi.org/10.1016/j.jbiomech.2024.112225" target="_blank" rel="noopener noreferrer">Cereatti et al., J Biomech, 2024</a>). That framing matches how I use the stack: high-g DIY IMUs for impact peaks the full mocap suit is not built to emphasise; laboratory mocap for the movement chain that produced the peak.
 </p>
 <p>
 Honest limits: IMUs are often better than a webcam for some planes and high-rate tasks, and worse than a calibrated optical volume when you need millimetre marker trajectories. Neither replaces a force plate when you need Newtons at the bag.
 </p>
 
-<h2>Perception Neuron 3 as the reference shelf</h2>
+<h2>Reference Systems and Laboratory Motion Capture</h2>
 <p>
-Biokineticum is the official Noitom partner in Poland. Perception Neuron 3 is a portable inertial motion-capture system — Axis Studio, HTTP streaming, BVH you can actually keep — with Polish analysis software written against that pipeline. A 2026 master’s thesis I supervised at Jan Długosz University in Częstochowa, on joint tracking and angle analysis with real-time feedback for physical therapy, used Perception Neuron 3 as the reference for a markerless tool. Reported correlations ran from r = 0.6 to over 0.9. That sentence belongs to that thesis, not as a blanket accuracy claim for every IMU we ship.
+In biomechanical research, portable inertial motion-capture systems (IMU mocap) enable full spatial orientation streaming and skeletal BVH reconstruction without multi-camera optical setups. A 2026 master’s thesis I supervised at Jan Długosz University in Częstochowa, on joint tracking and angle analysis with real-time feedback for physical therapy, used calibrated IMU telemetry as the reference for a markerless tool. Reported correlations ran from r = 0.6 to over 0.9. That sentence belongs to that thesis, not as a blanket accuracy claim for every IMU we ship.
 </p>
 <p>
-On GitHub, the Noitom single-sensor example shows how to stream raw acceleration from one Perception Neuron 3 unit through the Axis Studio SDK (Mocap.api) in Python and C++. That is the biofeedback path: one sensor, live telemetry, your own overlay. MotionScope 3D takes the BVH further into the browser. YouTube carries kick-analysis examples from the same toolchain. The hardware is small, relatively robust to interference, and priced for labs that cannot freeze a room for optical cameras.
+In our open repositories, we demonstrate how to stream and process raw acceleration from wireless telemetry sensors in Python and C++. That is the biofeedback path: one sensor, live telemetry, your own overlay. MotionScope 3D takes the BVH further into the browser. YouTube carries kick-analysis examples from the same toolchain. The hardware is small, relatively robust to interference, and priced for labs that cannot freeze a room for optical cameras.
 </p>
 <p>
-Packages on the Noitom page are deliberately coarse: Start (hardware and software), Sport/Pro (plus training and analysis), University (hardware plus specialised software for researchers). Training can run on the same Perception Neuron units used later for capture. I do not list street prices here; availability goes through the contact form.
+Hands-on workshops and training sessions can run directly on professional IMU units used for capture. Research and implementation consulting is available through our contact form.
 </p>
 
 <h2>How I would actually use the two together</h2>
 <p>
-High-g DIY IMUs belong on the striking limb when you care about impact peaks. Perception Neuron 3 belongs on the rest of the chain — trunk rotation, step, guard — when you care about the movement that produced the peak. The boxing work already said the quiet part: the cross is not an isolated arm; it is a path from the feet through the trunk. Measuring only the fist is how you get fast, weak punches that look good on a phone video.
+High-g DIY IMUs belong on the striking limb when you care about impact peaks. Full-body IMU mocap belongs on the rest of the chain — trunk rotation, step, guard — when you care about the movement that produced the peak. The boxing work already said the quiet part: the cross is not an isolated arm; it is a path from the feet through the trunk. Measuring only the fist is how you get fast, weak punches that look good on a phone video.
 </p>
 <p>
-If you are a clinic, a university lab, or a club that wants numbers on strikes without pretending a phone accelerometer is a scientific instrument, start with the blueprint or with a Perception Neuron 3 demo. Both are documented. Neither replaces a force plate when you need Newtons at the bag. They do replace the shrug that says striking is too fast to measure.
+If you are a clinic, a university lab, or a club that wants numbers on strikes without pretending a phone accelerometer is a scientific instrument, start with the open sensor blueprint. Both are documented. Neither replaces a force plate when you need Newtons at the bag. They do replace the shrug that says striking is too fast to measure.
 </p>
 
 <h2>References</h2>
@@ -190,11 +189,10 @@ If you are a clinic, a university lab, or a club that wants numbers on strikes w
 </ol>
 
 <div class="article-citation">
-    <strong>Strike diagnostics: open IMU kit and Noitom mocap</strong><br>
-    High-g hardware blueprint (up to 200 g) plus Perception Neuron 3, Axis Studio streaming, and Polish analysis software.
+    <strong>Strike diagnostics: open IMU kit and mocap</strong><br>
+    High-g hardware blueprint (up to 200 g) plus laboratory sensor telemetry and analytical software.
     <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem;">
         <a href="https://github.com/biokineticum/imu_dareczin" target="_blank" rel="noopener noreferrer" class="btn btn-primary">IMU kit on GitHub</a>
-        <a href="../noitom-en.html" class="btn btn-outline">Noitom Poland</a>
         <a href="../portfolio-en.html" class="btn btn-outline">Portfolio</a>
     </div>
 </div>

@@ -4,7 +4,6 @@ with open('education-en.html', 'r', encoding='utf-8') as f:
     content = f.read()
 
 content = content.replace('<title>Edukacja i Szkolenia | Analiza Ruchu i Biomechanika – Biokineticum</title>', '<title>Education & Training | Motion Analysis and Biomechanics – Biokineticum</title>')
-content = content.replace('content="Szkolenia i kursy z analizy biomechanicznej, oprogramowania Noitom Axis Studio oraz zaawansowanej fizjoterapii. Edukacja dla fizjoterapeutów i trenerów."', 'content="Training and courses in biomechanical analysis, Noitom Axis Studio software, and advanced physiotherapy. Education for physiotherapists and trainers."')
 content = content.replace('content="Edukacja i Szkolenia | Analiza Ruchu i Biomechanika – Biokineticum"', 'content="Education & Training | Motion Analysis and Biomechanics – Biokineticum"')
 
 content = content.replace('<h1>Oprogramowanie Edukacyjne</h1>', '<h1>Educational Software</h1>')

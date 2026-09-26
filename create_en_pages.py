@@ -7,7 +7,6 @@ file_pairs = {
     "about.html": "about-en.html",
     "cennik.html": "pricing-en.html",
     "education.html": "education-en.html",
-    "noitom.html": "noitom-en.html",
     "portfolio.html": "portfolio-en.html",
     "contact.html": "contact-en.html",
 }
@@ -43,7 +42,6 @@ for pl_file, en_file in file_pairs.items():
     content = content.replace('"cennik.html">Cennik</a>', '"pricing-en.html">Pricing</a>')
     content = content.replace('"education.html">Education</a>', '"education-en.html">Education</a>')
     content = content.replace('"education.html" class="active">Education Software</a>', '"education-en.html" class="active">Education Software</a>')
-    content = content.replace('"noitom.html">Noitom Polska</a>', '"noitom-en.html">Noitom Polska</a>')
     content = content.replace('"publikacje.html">Publikacje</a>', '"publications-en.html">Publications</a>')
     content = content.replace('"publikacje.html" class="active">Publikacje</a>', '"publications-en.html" class="active">Publications</a>')
     content = content.replace('"portfolio.html">Portfolio</a>', '"portfolio-en.html">Portfolio</a>')
@@ -54,7 +52,6 @@ for pl_file, en_file in file_pairs.items():
     content = content.replace('"about.html"', '"about-en.html"')
     content = content.replace('"cennik.html"', '"pricing-en.html"')
     content = content.replace('"education.html"', '"education-en.html"')
-    content = content.replace('"noitom.html"', '"noitom-en.html"')
     content = content.replace('"portfolio.html"', '"portfolio-en.html"')
     content = content.replace('"contact.html"', '"contact-en.html"')
     content = content.replace('"publikacje.html"', '"publications-en.html"')

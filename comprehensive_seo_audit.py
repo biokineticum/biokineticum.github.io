@@ -5,7 +5,7 @@ import json
 ignore_files = {
     'english_backup_20260219.html', 'cennik_backup_20260219.html',
     'education_backup_20260219.html', 'index_backup_20260219.html',
-    'noitom_backup_20260219.html', 'contact_backup_20260219.html',
+    'contact_backup_20260219.html',
     'english.html'
 }
 

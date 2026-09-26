@@ -8,12 +8,10 @@ with open('index-en.html', 'r', encoding='utf-8') as f:
 
 # Meta tags
 content = content.replace('<title>Biokineticum | Analiza Biomechaniczna i Fizjoterapia Online – dr hab. Dariusz Mosler</title>', '<title>Biokineticum | Biomechanical Analysis & Online Physiotherapy – Dr hab. Dariusz Mosler</title>')
-content = content.replace('content="Profesjonalna analiza ruchu komputerowa, fizjoterapia online i oficjalny dystrybutor Noitom Perception Neuron w Polsce. Konsultacje zdalne już od 100 zł."', 'content="Professional motion analysis, online physiotherapy and official Noitom Perception Neuron distributor in Poland."')
 content = content.replace('content="Biokineticum | Analiza Biomechaniczna i Fizjoterapia Online – dr hab. Dariusz Mosler"', 'content="Biokineticum | Biomechanical Analysis & Online Physiotherapy – Dr hab. Dariusz Mosler"')
 
 # Hero section
 content = content.replace('<h1>Analiza biomechaniczna i fizjoterapia</h1>', '<h1>Biomechanical Analysis & Physiotherapy</h1>')
-content = content.replace('<p>Łączę <a href="pricing-en.html">praktykę fizjoterapeutyczną</a> z komputerową <a\n                        href="education-en.html">analizą ruchu</a>, aby dostarczać łatwe rozwiązania i\n                    skuteczniej pomagać pacjentom oraz sportowcom poprzez wykorzystanie <a href="noitom-en.html">narzędzi\n                        biomechanicznych</a>.</p>', '<p>I combine <a href="pricing-en.html">physiotherapy practice</a> with computer <a href="education-en.html">motion analysis</a> to provide easy solutions and effectively help patients and athletes using <a href="noitom-en.html">biomechanical tools</a>.</p>')
 content = content.replace('Umów konsultację', 'Book Consultation')
 content = content.replace('Zobacz ofertę', 'See Offers')
 

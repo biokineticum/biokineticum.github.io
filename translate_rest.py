@@ -2,10 +2,6 @@ import re
 import os
 
 replacements = {
-    "noitom-en.html": [
-        ('<title>Dystrybucja Noitom Polska | Motion Capture</title>', '<title>Noitom Distribution Poland | Motion Capture</title>'),
-        ('content="Oficjalny dystrybutor systemów motion capture Noitom Perception Neuron w Polsce. Oprogramowanie i wsparcie techniczne."', 'content="Official distributor of Noitom Perception Neuron motion capture systems in Poland. Software and technical support."'),
-        ('<h1>Noitom Polska</h1>', '<h1>Noitom Distribution</h1>'),
         ('<p>Dystrybucja systemów motion capture i zaawansowana analityka.</p>', '<p>Distribution of motion capture systems and advanced analytics.</p>'),
         ('<h2>Perception Neuron</h2>', '<h2>Perception Neuron</h2>'),
         ('<p>Oferujemy wsparcie w zakupie najtańszych na rynku systemów MoCap - Perception Neuron 3 oraz Studio.</p>', '<p>We offer support in purchasing the most affordable MoCap systems on the market - Perception Neuron 3 and Studio.</p>'),
@@ -35,7 +31,6 @@ replacements = {
         ('<h3>System Oceny Chodu</h3>', '<h3>Gait Analysis System</h3>'),
         ('<p>Integracja czujników IMU z autorskim oprogramowaniem w Pythonie do automatycznej oceny symetrii chodu.</p>', '<p>Integration of IMU sensors with proprietary Python software for automatic gait symmetry assessment.</p>'),
         ('<h3>Analizator Ciosów</h3>', '<h3>Punch Analyzer</h3>'),
-        ('<p>Moduł stworzony dla klubów sztuk walki, wykorzystujący system Noitom do pomiaru kinetyki uderzeń.</p>', '<p>Module created for martial arts clubs, using the Noitom system to measure punch kinetics.</p>'),
         ('Dowiedz się więcej', 'Learn More'),
         ('<h4>Menu</h4>', '<h4>Menu</h4>'),
         ('<h4>Kontakt</h4>', '<h4>Contact</h4>'),

@@ -6,7 +6,6 @@ file_pairs = {
     "about.html": "about-en.html",
     "cennik.html": "pricing-en.html",
     "education.html": "education-en.html",
-    "noitom.html": "noitom-en.html",
     "publikacje.html": "publications-en.html",
     "portfolio.html": "portfolio-en.html",
     "contact.html": "contact-en.html",

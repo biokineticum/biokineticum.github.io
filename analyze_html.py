@@ -18,8 +18,7 @@ keywords = [
     "Dr Dariusz Mosler",
     "Cennik",
     "Oprogramowanie", 
-    "Noitom"
-]
+    ]
 
 print(f"File length: {len(content)}")
 

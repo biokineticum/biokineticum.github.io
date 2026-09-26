@@ -1,7 +1,7 @@
 import os
 import re
 
-html_files = [f for f in os.listdir('.') if f.endswith('.html') and not f.startswith('english_backup') and not f.startswith('cennik_backup') and not f.startswith('education_backup') and not f.startswith('index_backup') and not f.startswith('noitom_backup') and not f.startswith('contact_backup')]
+html_files = [f for f in os.listdir('.') if f.endswith('.html') and not f.startswith('english_backup') and not f.startswith('cennik_backup') and not f.startswith('education_backup') and not f.startswith('index_backup') and not f.startswith('contact_backup')]
 
 def check_file(filename):
     with open(filename, 'r', encoding='utf-8') as f:

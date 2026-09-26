@@ -23,7 +23,6 @@ schema_code = """
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Biokineticum",
-      "description": "Profesjonalna analiza biomechaniczna, fizjoterapia online oraz dystrybucja systemów motion capture Noitom Perception Neuron w Polsce",
       "url": "https://biokineticum.com",
       "telephone": "+48-502-123-662",
       "email": "biokineticum@proton.me",
