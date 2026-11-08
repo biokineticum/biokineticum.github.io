@@ -744,4 +744,28 @@
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
+   <url>
+      <loc>https://biokineticum.com/blog/boxing-body-size-force.html</loc>
+      <lastmod>2026-11-08</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://biokineticum.com/blog/boks-budowa-ciala-sila.html</loc>
+      <lastmod>2026-11-08</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://biokineticum.com/blog/knee-strength-balance-vision.html</loc>
+      <lastmod>2026-11-08</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://biokineticum.com/blog/sila-kolana-rownowaga-wzrok.html</loc>
+      <lastmod>2026-11-08</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
 </urlset>
